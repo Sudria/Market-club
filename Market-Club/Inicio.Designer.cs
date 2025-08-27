@@ -28,13 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.Prueba = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // Prueba
+            // 
+            this.Prueba.Location = new System.Drawing.Point(387, 235);
+            this.Prueba.Name = "Prueba";
+            this.Prueba.Size = new System.Drawing.Size(75, 23);
+            this.Prueba.TabIndex = 0;
+            this.Prueba.Text = "Pruebas";
+            this.Prueba.UseVisualStyleBackColor = true;
+            this.Prueba.Click += new System.EventHandler(this.Prueba_Click);
+            // 
+            // Inicio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.Prueba);
+            this.Name = "Inicio";
+            this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Inicio_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button Prueba;
     }
 }
 
