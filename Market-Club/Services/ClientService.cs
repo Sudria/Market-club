@@ -40,7 +40,6 @@ namespace Market_Club.Services
             string query = "INSERT INTO Clients (Cuit, Name, Surname, Tel, Gender, Birthdate, Address, Email) " +
                 "VALUES (@Cuit, @Name, @Surname, @Tel, @Gender, @Birthdate, @Address, @Email)";
 
-
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 SqlCommand cmd = new SqlCommand(query, conexion);
