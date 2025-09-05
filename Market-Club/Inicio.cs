@@ -1,4 +1,5 @@
-﻿using Market_Club.Services;
+﻿using Market_Club.Controllers;
+using Market_Club.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,14 +19,33 @@ namespace Market_Club
             InitializeComponent();
         }
 
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Prueba_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Base creada correctamente");
+          ClientController clientController = new ClientController();
+
+                 clientController.InsertClient(new Class.ClientModel
+                {
+                    Cuit = 123456709,
+                    Name = "Mauro",
+                    Surname = "Perez",
+                    Tel = "1234567890",
+                    Gender = "M",
+                    Birthdate = "1990-01-01",
+                    Address = "Calle Falsa 123",
+                    Email = "falsa@gmail.com",
+                });
+                
+                
         }
+
+        private void Pruebas2_Click(object sender, EventArgs e)
+        {
+            ClientService clientService = new ClientService();
+            
+            DataGrid.DataSource = clientService.ShowClients();
+
+        }
+
+  
     }
 }
