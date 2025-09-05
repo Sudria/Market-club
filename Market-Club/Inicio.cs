@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Market_Club.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace Market_Club
         public Inicio()
         {
             InitializeComponent();
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Prueba_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Base creada correctamente");
         }
     }
 }
