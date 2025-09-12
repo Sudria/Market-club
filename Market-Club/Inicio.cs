@@ -21,19 +21,7 @@ namespace Market_Club
 
         private void Prueba_Click(object sender, EventArgs e)
         {
-          ClientController clientController = new ClientController();
-
-                 clientController.InsertClient(new Class.ClientModel
-                {
-                    Cuit = 123456709,
-                    Name = "Mauro",
-                    Surname = "Perez",
-                    Tel = "1234567890",
-                    Gender = "M",
-                    Birthdate = "1990-01-01",
-                    Address = "Calle Falsa 123",
-                    Email = "falsa@gmail.com",
-                });
+    
                 
                 
         }
