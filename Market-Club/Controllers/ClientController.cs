@@ -22,9 +22,19 @@ namespace Market_Club.Controllers
             _clientService.CreateTable();
         }
 
-        public void AddClient(ClientModel Client)
+        public void InsertClient(ClientModel client)
         {
-            _clientService.InsertClient(Client);
+            _clientService.InsertClient(client);
+        }
+
+        public ClientModel ShowClientByCuit(int cuit)
+        {
+             return _clientService.ShowClientByCuit(cuit);
+        }
+
+        public List<ClientModel> ShowClients()
+        {
+            return _clientService.ShowClients();
         }
     }
 }
