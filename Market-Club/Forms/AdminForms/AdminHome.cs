@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Market_Club.Forms
+namespace Market_Club.Forms.AdminForms
 {
-    public partial class Login : Form
+    public partial class AdminHome : UserControl
     {
-        public Login()
+        public AdminHome()
         {
             InitializeComponent();
         }
