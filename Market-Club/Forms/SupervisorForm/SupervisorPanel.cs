@@ -30,5 +30,29 @@ namespace Market_Club.Forms.SupervisorForm
                 parentForm.Close();
             }
         }
+
+        private void ButtonAboutMe_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(new AboutMe());
+        }
+
+        private void ButtonGraphics_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(new SupervisorGraphic());
+        }
+
+        private void ButtonReports_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(new SupervisorReports());
+        }
     }
 }

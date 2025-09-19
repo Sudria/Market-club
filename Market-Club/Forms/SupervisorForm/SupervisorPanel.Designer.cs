@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupervisorPanel));
             this.SupervisorDashboard = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.LogOut = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.ButtonAboutMe = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.ButtonReports = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.ButtonGraphics = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.LogOut = new System.Windows.Forms.Button();
             this.SupervisorDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // SupervisorDashboard
@@ -54,11 +54,11 @@
             this.SupervisorDashboard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SupervisorDashboard.Controls.Add(this.LogOut);
             this.SupervisorDashboard.Controls.Add(this.pictureBox7);
-            this.SupervisorDashboard.Controls.Add(this.button10);
+            this.SupervisorDashboard.Controls.Add(this.ButtonAboutMe);
             this.SupervisorDashboard.Controls.Add(this.pictureBox6);
-            this.SupervisorDashboard.Controls.Add(this.button8);
+            this.SupervisorDashboard.Controls.Add(this.ButtonReports);
             this.SupervisorDashboard.Controls.Add(this.pictureBox4);
-            this.SupervisorDashboard.Controls.Add(this.button6);
+            this.SupervisorDashboard.Controls.Add(this.ButtonGraphics);
             this.SupervisorDashboard.Controls.Add(this.pictureBox2);
             this.SupervisorDashboard.Controls.Add(this.button5);
             this.SupervisorDashboard.Controls.Add(this.pictureBox1);
@@ -68,20 +68,75 @@
             this.SupervisorDashboard.Size = new System.Drawing.Size(215, 710);
             this.SupervisorDashboard.TabIndex = 4;
             // 
-            // button8
+            // LogOut
             // 
-            this.button8.AutoSize = true;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.Location = new System.Drawing.Point(42, 95);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(155, 30);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Reportes";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.LogOut.AutoSize = true;
+            this.LogOut.FlatAppearance.BorderSize = 0;
+            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LogOut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LogOut.Location = new System.Drawing.Point(42, 636);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(155, 30);
+            this.LogOut.TabIndex = 13;
+            this.LogOut.Text = "Cerrar Sesión";
+            this.LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogOut.UseVisualStyleBackColor = true;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.InitialImage")));
+            this.pictureBox7.Location = new System.Drawing.Point(12, 637);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 12;
+            this.pictureBox7.TabStop = false;
+            // 
+            // ButtonAboutMe
+            // 
+            this.ButtonAboutMe.AutoSize = true;
+            this.ButtonAboutMe.FlatAppearance.BorderSize = 0;
+            this.ButtonAboutMe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAboutMe.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ButtonAboutMe.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonAboutMe.Location = new System.Drawing.Point(42, 581);
+            this.ButtonAboutMe.Name = "ButtonAboutMe";
+            this.ButtonAboutMe.Size = new System.Drawing.Size(155, 30);
+            this.ButtonAboutMe.TabIndex = 11;
+            this.ButtonAboutMe.Text = "Sobre mi";
+            this.ButtonAboutMe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonAboutMe.UseVisualStyleBackColor = true;
+            this.ButtonAboutMe.Click += new System.EventHandler(this.ButtonAboutMe_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
+            this.pictureBox6.Location = new System.Drawing.Point(12, 582);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
+            // ButtonReports
+            // 
+            this.ButtonReports.AutoSize = true;
+            this.ButtonReports.FlatAppearance.BorderSize = 0;
+            this.ButtonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonReports.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ButtonReports.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonReports.Location = new System.Drawing.Point(42, 95);
+            this.ButtonReports.Name = "ButtonReports";
+            this.ButtonReports.Size = new System.Drawing.Size(155, 30);
+            this.ButtonReports.TabIndex = 7;
+            this.ButtonReports.Text = "Reportes";
+            this.ButtonReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonReports.UseVisualStyleBackColor = true;
+            this.ButtonReports.Click += new System.EventHandler(this.ButtonReports_Click);
             // 
             // pictureBox4
             // 
@@ -94,19 +149,20 @@
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
-            // button6
+            // ButtonGraphics
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.Location = new System.Drawing.Point(42, 60);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(155, 24);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Graficos";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+            this.ButtonGraphics.FlatAppearance.BorderSize = 0;
+            this.ButtonGraphics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonGraphics.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ButtonGraphics.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonGraphics.Location = new System.Drawing.Point(42, 60);
+            this.ButtonGraphics.Name = "ButtonGraphics";
+            this.ButtonGraphics.Size = new System.Drawing.Size(155, 24);
+            this.ButtonGraphics.TabIndex = 3;
+            this.ButtonGraphics.Text = "Graficos";
+            this.ButtonGraphics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonGraphics.UseVisualStyleBackColor = true;
+            this.ButtonGraphics.Click += new System.EventHandler(this.ButtonGraphics_Click);
             // 
             // pictureBox2
             // 
@@ -144,59 +200,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 582);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            // 
-            // button10
-            // 
-            this.button10.AutoSize = true;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button10.Location = new System.Drawing.Point(42, 581);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(155, 30);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "Sobre mi";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.InitialImage")));
-            this.pictureBox7.Location = new System.Drawing.Point(12, 637);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 12;
-            this.pictureBox7.TabStop = false;
-            // 
-            // LogOut
-            // 
-            this.LogOut.AutoSize = true;
-            this.LogOut.FlatAppearance.BorderSize = 0;
-            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOut.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LogOut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LogOut.Location = new System.Drawing.Point(42, 636);
-            this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(155, 30);
-            this.LogOut.TabIndex = 13;
-            this.LogOut.Text = "Cerrar Sesión";
-            this.LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogOut.UseVisualStyleBackColor = true;
-            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
-            // 
             // SupervisorPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,11 +209,11 @@
             this.Size = new System.Drawing.Size(215, 710);
             this.SupervisorDashboard.ResumeLayout(false);
             this.SupervisorDashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,15 +221,15 @@
         #endregion
 
         private System.Windows.Forms.Panel SupervisorDashboard;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button ButtonReports;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button ButtonGraphics;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button ButtonAboutMe;
         private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

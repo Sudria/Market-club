@@ -34,24 +34,47 @@ namespace Market_Club.Forms.AdminForms
 
         private void buttonAboutMe_Click(object sender, EventArgs e)
         {
-            Dashboard parentForm = this.FindForm() as Dashboard;
-            if (parentForm != null)
-            {
+                Dashboard parentForm = this.FindForm() as Dashboard;
+         
                 parentForm.contentPanel.Controls.Clear();
                 parentForm.contentPanel.Controls.Add(new AboutMe());
-            }
+            
         }
 
         private void AdminHome_Click(object sender, EventArgs e)
         {
             Dashboard parentForm = this.FindForm() as Dashboard;
-            AdminPanel adminPanel = new AdminPanel();
             AdminHome adminHome = new AdminHome();
 
-            parentForm.dashboardPanel.Controls.Clear();
-            parentForm.dashboardPanel.Controls.Add(adminPanel);
             parentForm.contentPanel.Controls.Clear();
             parentForm.contentPanel.Controls.Add(adminHome);
+        }
+
+        private void AdminProduct_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            AdminProduct adminProduct = new AdminProduct();
+
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(adminProduct);
+        }
+
+        private void AdminUsers_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            AdminUser adminUsers = new AdminUser();
+
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(adminUsers);
+        }
+
+        private void AdminClient_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            AdminClient adminClient = new AdminClient();
+
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(adminClient);
         }
     }
 }

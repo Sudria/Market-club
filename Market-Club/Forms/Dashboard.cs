@@ -26,8 +26,7 @@ namespace Market_Club
             InitializeComponent();
             user = LoggedUsser;
             CargarPanelSegunRol();
-
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

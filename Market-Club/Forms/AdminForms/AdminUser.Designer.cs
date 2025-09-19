@@ -1,6 +1,6 @@
 ﻿namespace Market_Club.Forms.AdminForms
 {
-    partial class AdminUsers
+    partial class AdminUser
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

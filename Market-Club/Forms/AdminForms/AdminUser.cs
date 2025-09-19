@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms.AdminForms
 {
-    public partial class AdminUsers : UserControl
+    public partial class AdminUser : UserControl
     {
-        public AdminUsers()
+        public AdminUser()
         {
             InitializeComponent();
         }

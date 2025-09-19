@@ -30,25 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
             this.AdminDashboard = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.backUpAdmin = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.ProductSeller = new System.Windows.Forms.Button();
+            this.AdminProduct = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.ClientSeller = new System.Windows.Forms.Button();
+            this.AdminClient = new System.Windows.Forms.Button();
             this.LogOut = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.buttonAboutMe = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.AdminUsers = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.AdminHome = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.backUpAdmin = new System.Windows.Forms.Button();
             this.AdminDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -57,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // AdminDashboard
@@ -67,16 +67,16 @@
             this.AdminDashboard.Controls.Add(this.pictureBox9);
             this.AdminDashboard.Controls.Add(this.backUpAdmin);
             this.AdminDashboard.Controls.Add(this.pictureBox8);
-            this.AdminDashboard.Controls.Add(this.ProductSeller);
+            this.AdminDashboard.Controls.Add(this.AdminProduct);
             this.AdminDashboard.Controls.Add(this.pictureBox5);
-            this.AdminDashboard.Controls.Add(this.ClientSeller);
+            this.AdminDashboard.Controls.Add(this.AdminClient);
             this.AdminDashboard.Controls.Add(this.LogOut);
             this.AdminDashboard.Controls.Add(this.pictureBox7);
             this.AdminDashboard.Controls.Add(this.buttonAboutMe);
             this.AdminDashboard.Controls.Add(this.pictureBox6);
             this.AdminDashboard.Controls.Add(this.button8);
             this.AdminDashboard.Controls.Add(this.pictureBox4);
-            this.AdminDashboard.Controls.Add(this.button7);
+            this.AdminDashboard.Controls.Add(this.AdminUsers);
             this.AdminDashboard.Controls.Add(this.pictureBox3);
             this.AdminDashboard.Controls.Add(this.button6);
             this.AdminDashboard.Controls.Add(this.pictureBox2);
@@ -87,6 +87,31 @@
             this.AdminDashboard.Name = "AdminDashboard";
             this.AdminDashboard.Size = new System.Drawing.Size(215, 710);
             this.AdminDashboard.TabIndex = 3;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.InitialImage")));
+            this.pictureBox9.Location = new System.Drawing.Point(12, 285);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 24;
+            this.pictureBox9.TabStop = false;
+            // 
+            // backUpAdmin
+            // 
+            this.backUpAdmin.FlatAppearance.BorderSize = 0;
+            this.backUpAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backUpAdmin.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.backUpAdmin.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.backUpAdmin.Location = new System.Drawing.Point(42, 285);
+            this.backUpAdmin.Name = "backUpAdmin";
+            this.backUpAdmin.Size = new System.Drawing.Size(155, 24);
+            this.backUpAdmin.TabIndex = 23;
+            this.backUpAdmin.Text = "BackUp";
+            this.backUpAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.backUpAdmin.UseVisualStyleBackColor = true;
             // 
             // pictureBox8
             // 
@@ -99,19 +124,20 @@
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
             // 
-            // ProductSeller
+            // AdminProduct
             // 
-            this.ProductSeller.FlatAppearance.BorderSize = 0;
-            this.ProductSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProductSeller.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.ProductSeller.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ProductSeller.Location = new System.Drawing.Point(42, 239);
-            this.ProductSeller.Name = "ProductSeller";
-            this.ProductSeller.Size = new System.Drawing.Size(155, 24);
-            this.ProductSeller.TabIndex = 21;
-            this.ProductSeller.Text = "Productos";
-            this.ProductSeller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProductSeller.UseVisualStyleBackColor = true;
+            this.AdminProduct.FlatAppearance.BorderSize = 0;
+            this.AdminProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AdminProduct.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.AdminProduct.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AdminProduct.Location = new System.Drawing.Point(42, 239);
+            this.AdminProduct.Name = "AdminProduct";
+            this.AdminProduct.Size = new System.Drawing.Size(155, 24);
+            this.AdminProduct.TabIndex = 21;
+            this.AdminProduct.Text = "Productos";
+            this.AdminProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AdminProduct.UseVisualStyleBackColor = true;
+            this.AdminProduct.Click += new System.EventHandler(this.AdminProduct_Click);
             // 
             // pictureBox5
             // 
@@ -124,19 +150,20 @@
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
-            // ClientSeller
+            // AdminClient
             // 
-            this.ClientSeller.FlatAppearance.BorderSize = 0;
-            this.ClientSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClientSeller.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.ClientSeller.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSeller.Location = new System.Drawing.Point(42, 196);
-            this.ClientSeller.Name = "ClientSeller";
-            this.ClientSeller.Size = new System.Drawing.Size(155, 24);
-            this.ClientSeller.TabIndex = 19;
-            this.ClientSeller.Text = "Clientes";
-            this.ClientSeller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClientSeller.UseVisualStyleBackColor = true;
+            this.AdminClient.FlatAppearance.BorderSize = 0;
+            this.AdminClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AdminClient.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.AdminClient.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AdminClient.Location = new System.Drawing.Point(42, 196);
+            this.AdminClient.Name = "AdminClient";
+            this.AdminClient.Size = new System.Drawing.Size(155, 24);
+            this.AdminClient.TabIndex = 19;
+            this.AdminClient.Text = "Clientes";
+            this.AdminClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AdminClient.UseVisualStyleBackColor = true;
+            this.AdminClient.Click += new System.EventHandler(this.AdminClient_Click);
             // 
             // LogOut
             // 
@@ -218,19 +245,20 @@
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
-            // button7
+            // AdminUsers
             // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button7.Location = new System.Drawing.Point(42, 102);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(155, 24);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Usuarios";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.AdminUsers.FlatAppearance.BorderSize = 0;
+            this.AdminUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AdminUsers.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.AdminUsers.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AdminUsers.Location = new System.Drawing.Point(42, 102);
+            this.AdminUsers.Name = "AdminUsers";
+            this.AdminUsers.Size = new System.Drawing.Size(155, 24);
+            this.AdminUsers.TabIndex = 5;
+            this.AdminUsers.Text = "Usuarios";
+            this.AdminUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AdminUsers.UseVisualStyleBackColor = true;
+            this.AdminUsers.Click += new System.EventHandler(this.AdminUsers_Click);
             // 
             // pictureBox3
             // 
@@ -294,31 +322,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.InitialImage")));
-            this.pictureBox9.Location = new System.Drawing.Point(12, 285);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 24;
-            this.pictureBox9.TabStop = false;
-            // 
-            // backUpAdmin
-            // 
-            this.backUpAdmin.FlatAppearance.BorderSize = 0;
-            this.backUpAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backUpAdmin.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.backUpAdmin.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.backUpAdmin.Location = new System.Drawing.Point(42, 285);
-            this.backUpAdmin.Name = "backUpAdmin";
-            this.backUpAdmin.Size = new System.Drawing.Size(155, 24);
-            this.backUpAdmin.TabIndex = 23;
-            this.backUpAdmin.Text = "BackUp";
-            this.backUpAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.backUpAdmin.UseVisualStyleBackColor = true;
-            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,6 +331,7 @@
             this.Size = new System.Drawing.Size(215, 710);
             this.AdminDashboard.ResumeLayout(false);
             this.AdminDashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -336,7 +340,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,16 +353,16 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button AdminUsers;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button AdminHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button ClientSeller;
+        private System.Windows.Forms.Button AdminClient;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button ProductSeller;
+        private System.Windows.Forms.Button AdminProduct;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button backUpAdmin;
     }

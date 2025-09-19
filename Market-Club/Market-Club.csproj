@@ -73,6 +73,12 @@
     <Compile Include="Forms\AboutMe.Designer.cs">
       <DependentUpon>AboutMe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminForms\AdminClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminClient.Designer.cs">
+      <DependentUpon>AdminClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\AdminHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,11 +97,11 @@
     <Compile Include="Forms\AdminForms\AdminProduct.Designer.cs">
       <DependentUpon>AdminProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\AdminUsers.cs">
+    <Compile Include="Forms\AdminForms\AdminUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\AdminUsers.Designer.cs">
-      <DependentUpon>AdminUsers.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\AdminUser.Designer.cs">
+      <DependentUpon>AdminUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
@@ -174,6 +180,9 @@
     <EmbeddedResource Include="Forms\AboutMe.resx">
       <DependentUpon>AboutMe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminClient.resx">
+      <DependentUpon>AdminClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,8 +192,8 @@
     <EmbeddedResource Include="Forms\AdminForms\AdminProduct.resx">
       <DependentUpon>AdminProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\AdminUsers.resx">
-      <DependentUpon>AdminUsers.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\AdminUser.resx">
+      <DependentUpon>AdminUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
