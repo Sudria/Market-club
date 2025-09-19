@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Forms\AboutMe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutMe.Designer.cs">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\AdminHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +84,18 @@
     </Compile>
     <Compile Include="Forms\AdminForms\AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminProduct.Designer.cs">
+      <DependentUpon>AdminProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminUsers.Designer.cs">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
@@ -91,17 +109,53 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SellerForms\SellerClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerForms\SellerClient.Designer.cs">
+      <DependentUpon>SellerClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellerForms\SellerHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerForms\SellerHome.Designer.cs">
+      <DependentUpon>SellerHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SellerForms\SellerPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\SellerForms\SellerPanel.Designer.cs">
       <DependentUpon>SellerPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SellerForms\SellerProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerForms\SellerProduct.Designer.cs">
+      <DependentUpon>SellerProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellerForms\SellerSale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerForms\SellerSale.Designer.cs">
+      <DependentUpon>SellerSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupervisorForm\SupervisorGraphic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SupervisorForm\SupervisorGraphic.Designer.cs">
+      <DependentUpon>SupervisorGraphic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SupervisorForm\SupervisorPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\SupervisorForm\SupervisorPanel.Designer.cs">
       <DependentUpon>SupervisorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupervisorForm\SupervisorReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SupervisorForm\SupervisorReports.Designer.cs">
+      <DependentUpon>SupervisorReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Controllers\ClientController.cs" />
@@ -117,11 +171,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_db_poliDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AboutMe.resx">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminProduct.resx">
+      <DependentUpon>AdminProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminUsers.resx">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -129,11 +192,29 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerForms\SellerClient.resx">
+      <DependentUpon>SellerClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerForms\SellerHome.resx">
+      <DependentUpon>SellerHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SellerForms\SellerPanel.resx">
       <DependentUpon>SellerPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerForms\SellerProduct.resx">
+      <DependentUpon>SellerProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerForms\SellerSale.resx">
+      <DependentUpon>SellerSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupervisorForm\SupervisorGraphic.resx">
+      <DependentUpon>SupervisorGraphic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupervisorForm\SupervisorPanel.resx">
       <DependentUpon>SupervisorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupervisorForm\SupervisorReports.resx">
+      <DependentUpon>SupervisorReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

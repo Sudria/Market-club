@@ -36,8 +36,8 @@
             this.AdminButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.RolLabel = new System.Windows.Forms.Label();
-            this.DashboardPanel = new System.Windows.Forms.Panel();
-            this.ContentPanel = new System.Windows.Forms.Panel();
+            this.dashboardPanel = new System.Windows.Forms.Panel();
+            this.contentPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,34 +128,34 @@
             this.RolLabel.Text = "Rol";
             this.RolLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // DashboardPanel
+            // dashboardPanel
             // 
-            this.DashboardPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.DashboardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DashboardPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DashboardPanel.Location = new System.Drawing.Point(0, 47);
-            this.DashboardPanel.Name = "DashboardPanel";
-            this.DashboardPanel.Size = new System.Drawing.Size(215, 694);
-            this.DashboardPanel.TabIndex = 1;
-            this.DashboardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Home_Paint);
+            this.dashboardPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.dashboardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dashboardPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dashboardPanel.Location = new System.Drawing.Point(0, 47);
+            this.dashboardPanel.Name = "dashboardPanel";
+            this.dashboardPanel.Size = new System.Drawing.Size(215, 694);
+            this.dashboardPanel.TabIndex = 1;
+            this.dashboardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Home_Paint);
             // 
-            // ContentPanel
+            // contentPanel
             // 
-            this.ContentPanel.BackColor = System.Drawing.Color.White;
-            this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentPanel.Location = new System.Drawing.Point(215, 47);
-            this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(1146, 694);
-            this.ContentPanel.TabIndex = 2;
-            this.ContentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.contentPanel.BackColor = System.Drawing.Color.White;
+            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.Location = new System.Drawing.Point(215, 47);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(1146, 694);
+            this.contentPanel.TabIndex = 2;
+            this.contentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1361, 741);
-            this.Controls.Add(this.ContentPanel);
-            this.Controls.Add(this.DashboardPanel);
+            this.Controls.Add(this.contentPanel);
+            this.Controls.Add(this.dashboardPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
@@ -172,14 +172,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel DashboardPanel;
+        public System.Windows.Forms.Panel dashboardPanel;
         private System.Windows.Forms.Label RolLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button SellerButton;
         private System.Windows.Forms.Button SupervisorButton;
         private System.Windows.Forms.Button AdminButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Panel ContentPanel;
+        public System.Windows.Forms.Panel contentPanel;
     }
 }
 

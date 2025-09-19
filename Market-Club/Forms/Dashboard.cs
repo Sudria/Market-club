@@ -63,32 +63,32 @@ namespace Market_Club
         private void AdminButton_Click(object sender, EventArgs e)
         {
 
-            DashboardPanel.Controls.Clear(); 
+            dashboardPanel.Controls.Clear(); 
             RolLabel.Text = "Admin";
             AdminPanel adminPanel = new AdminPanel();
-            DashboardPanel.Controls.Add(adminPanel);
-            ContentPanel.Controls.Clear();
+            dashboardPanel.Controls.Add(adminPanel);
+            contentPanel.Controls.Clear();
             AdminHome adminHome = new AdminHome();
-            ContentPanel.Controls.Add(adminHome);
+            contentPanel.Controls.Add(adminHome);
 
         }
 
         private void SupervisorButton_Click(object sender, EventArgs e)
         {
-            DashboardPanel.Controls.Clear();
+            dashboardPanel.Controls.Clear();
             RolLabel.Text = "Supervisor";
             SupervisorPanel supervisorPanel = new SupervisorPanel();
-            DashboardPanel.Controls.Add(supervisorPanel);
-            ContentPanel.Controls.Clear();
+            dashboardPanel.Controls.Add(supervisorPanel);
+            contentPanel.Controls.Clear();
         }
 
         private void SellerButton_Click(object sender, EventArgs e)
         {
-            DashboardPanel.Controls.Clear();
+            dashboardPanel.Controls.Clear();
             RolLabel.Text = "Vendedor";
             SellerPanel sellerDashboard1 = new SellerPanel();
-            DashboardPanel.Controls.Add(sellerDashboard1);
-            ContentPanel.Controls.Clear();
+            dashboardPanel.Controls.Add(sellerDashboard1);
+            contentPanel.Controls.Clear();
 
         }
 
@@ -104,17 +104,17 @@ namespace Market_Club
 
         private void CargarPanelSegunRol()
         {
-            DashboardPanel.Controls.Clear();
-            ContentPanel.Controls.Clear();
+            dashboardPanel.Controls.Clear();
+            contentPanel.Controls.Clear();
 
             switch (user.RolId)
             {
                 case 1: // Admin
                     RolLabel.Text = "Admin";
                     AdminPanel adminPanel1 = new AdminPanel();
-                    DashboardPanel.Controls.Add(adminPanel1);
+                    dashboardPanel.Controls.Add(adminPanel1);
                     AdminHome adminHome = new AdminHome();
-                    ContentPanel.Controls.Add(adminHome);
+                    contentPanel.Controls.Add(adminHome);
                     break;
 
                 case 2: // Supervisor
@@ -124,7 +124,7 @@ namespace Market_Club
                 case 3: // Vendedor
                     RolLabel.Text = "Vendedor";
                     SellerPanel sellerDashboard1 = new SellerPanel();
-                    DashboardPanel.Controls.Add(sellerDashboard1);
+                    dashboardPanel.Controls.Add(sellerDashboard1);
                     break;
 
                 default:

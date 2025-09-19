@@ -31,5 +31,27 @@ namespace Market_Club.Forms.AdminForms
             }
             
         }
+
+        private void buttonAboutMe_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            if (parentForm != null)
+            {
+                parentForm.contentPanel.Controls.Clear();
+                parentForm.contentPanel.Controls.Add(new AboutMe());
+            }
+        }
+
+        private void AdminHome_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            AdminPanel adminPanel = new AdminPanel();
+            AdminHome adminHome = new AdminHome();
+
+            parentForm.dashboardPanel.Controls.Clear();
+            parentForm.dashboardPanel.Controls.Add(adminPanel);
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(adminHome);
+        }
     }
 }
