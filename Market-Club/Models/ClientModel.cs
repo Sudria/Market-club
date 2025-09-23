@@ -12,7 +12,6 @@ namespace Market_Club.Class
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Tel { get; set; }
-        public string Gender { get; set; }
         public string Birthdate { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }

@@ -1,8 +1,6 @@
 ﻿using Market_Club.Class;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace Market_Club.Services
@@ -20,7 +18,6 @@ namespace Market_Club.Services
             Name NVARCHAR(100),
             Surname NVARCHAR(100),
             Tel NVARCHAR(20),
-            Gender NVARCHAR(10),
             Birthdate DATE,
             Address NVARCHAR(200),
             Email NVARCHAR(100)
@@ -40,7 +37,7 @@ namespace Market_Club.Services
 
         public void InsertClient(ClientModel client)
         {
-            string query = "INSERT INTO Clients (Cuit, Name, Surname, Tel, Gender, Birthdate, Address, Email) VALUES (@Cuit, @Name, @Surname, @Tel, @Gender, @Birthdate, @Address, @Email)";
+            string query = "INSERT INTO Clients (Cuit, Name, Surname, Tel, Gender, Birthdate, Address, Email) VALUES (@Cuit, @Name, @Surname, @Tel, @Birthdate, @Address, @Email)";
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
@@ -49,7 +46,6 @@ namespace Market_Club.Services
                 cmd.Parameters.AddWithValue("@Name", client.Name);
                 cmd.Parameters.AddWithValue("@Surname", client.Surname);
                 cmd.Parameters.AddWithValue("@Tel", client.Tel);
-                cmd.Parameters.AddWithValue("@Gender", client.Gender);
                 cmd.Parameters.AddWithValue("@Birthdate", client.Birthdate);
                 cmd.Parameters.AddWithValue("@Address", client.Address);
                 cmd.Parameters.AddWithValue("@Email", client.Email);
@@ -78,7 +74,6 @@ namespace Market_Club.Services
                             Name = reader["Name"]?.ToString(),
                             Surname = reader["Surname"]?.ToString(),
                             Tel = reader["Tel"]?.ToString(),
-                            Gender = reader["Gender"]?.ToString(),
                             Birthdate = reader["Birthdate"]?.ToString(),
                             Address = reader["Address"]?.ToString(),
                             Email = reader["Email"]?.ToString()
@@ -117,7 +112,6 @@ namespace Market_Club.Services
                     Name = reader["Name"]?.ToString(),
                     Surname = reader["Surname"]?.ToString(),
                     Tel = reader["Tel"]?.ToString(),
-                    Gender = reader["Gender"]?.ToString(),
                     Birthdate = reader["Birthdate"]?.ToString(),
                     Address = reader["Address"]?.ToString(),
                     Email = reader["Email"]?.ToString()
