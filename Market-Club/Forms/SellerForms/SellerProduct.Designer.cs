@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dbpoliDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._db_poliDataSet = new Market_Club._db_poliDataSet();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAct = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbpoliDataSetBindingSource)).BeginInit();
@@ -57,6 +57,21 @@
             this.panel3.Size = new System.Drawing.Size(1146, 694);
             this.panel3.TabIndex = 4;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // btnAct
+            // 
+            this.btnAct.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAct.FlatAppearance.BorderSize = 0;
+            this.btnAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAct.ForeColor = System.Drawing.Color.White;
+            this.btnAct.Location = new System.Drawing.Point(413, 105);
+            this.btnAct.Name = "btnAct";
+            this.btnAct.Size = new System.Drawing.Size(102, 26);
+            this.btnAct.TabIndex = 13;
+            this.btnAct.Text = "Actualizar";
+            this.btnAct.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -86,6 +101,7 @@
             this.dataGridView1.DataSource = this.dbpoliDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(26, 137);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1086, 523);
             this.dataGridView1.TabIndex = 1;
             // 
@@ -108,21 +124,6 @@
             this.label2.Size = new System.Drawing.Size(77, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Productos";
-            // 
-            // btnAct
-            // 
-            this.btnAct.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnAct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAct.FlatAppearance.BorderSize = 0;
-            this.btnAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAct.ForeColor = System.Drawing.Color.White;
-            this.btnAct.Location = new System.Drawing.Point(413, 105);
-            this.btnAct.Name = "btnAct";
-            this.btnAct.Size = new System.Drawing.Size(102, 26);
-            this.btnAct.TabIndex = 13;
-            this.btnAct.Text = "Actualizar";
-            this.btnAct.UseVisualStyleBackColor = false;
             // 
             // SellerProduct
             // 

@@ -1,5 +1,6 @@
 ﻿using Market_Club.Models;
 using Market_Club.Services;
+using Market_Club.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,14 +27,60 @@ namespace Market_Club.Controllers
             }
 
             // Insertar usuario nuevo
-            public void AddUser(UserModel user)
+            public bool AddUser(UserModel user)
             {
-                _userService.InsertUser(user);
-                MessageBox.Show("Usuario agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Username
+            if (string.IsNullOrWhiteSpace(user.Username))
+            {
+                MessageBox.Show("El nombre de usuario no puede estar vacío.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (user.Username.Length > 20)
+            {
+                MessageBox.Show("El nombre de usuario no puede tener más de 20 caracteres.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
-            // Eliminar usuario por id
-            public void DeleteUser(int id)
+            // Name
+            if (!Validator.isValidText(user.Name, "Nombre"))
+                return false;
+
+            // Surname
+            if (!Validator.isValidText(user.Surname, "Apellido"))
+                return false;
+
+            // Email
+            if (!Validator.isValidEmail(user.Email))
+                return false;
+
+             // RolId
+            if (user.RolId <= 0)
+            {
+                MessageBox.Show("Debe seleccionar un rol válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Password
+            if (string.IsNullOrWhiteSpace(user.Password))
+            {
+                MessageBox.Show("El campo Contraseña no puede estar vacío.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+                
+            }
+            else if (user.Password.Length < 6)
+            {
+                MessageBox.Show("La contraseña debe tener al menos 6 caracteres.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Si llega aquí, todos los campos son válidos
+            _userService.InsertUser(user);
+            MessageBox.Show("Usuario agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
+        }
+
+        // Eliminar usuario por id
+        public void DeleteUser(int id)
             {
                 _userService.DeleteUser(id);
                 MessageBox.Show("Usuario eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);

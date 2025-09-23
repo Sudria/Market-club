@@ -1,4 +1,5 @@
-﻿using Market_Club.Models;
+﻿using Market_Club.Class;
+using Market_Club.Models;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -28,6 +29,37 @@ namespace Market_Club.Services
                 cmd.ExecuteNonQuery();
             }
         }
+
+
+        public void UpdateUser(UserModel user)
+        {
+            string query = @"UPDATE Users
+                     SET Name = @Name,
+                         Surname = @Surname,
+                         Password = @Password,
+                         RolId = @RolId,
+                         Username = @Username,
+                         Email = @Email
+                     WHERE Id = @Id";
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@Id", user.Id);
+                cmd.Parameters.AddWithValue("@Name", user.Name);
+                cmd.Parameters.AddWithValue("@Surname", user.Surname);
+                cmd.Parameters.AddWithValue("@Password", user.Password);
+                cmd.Parameters.AddWithValue("@RolId", user.RolId);
+                cmd.Parameters.AddWithValue("@Username", user.Username);
+                cmd.Parameters.AddWithValue("@Email", user.Email);
+
+                conexion.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+            }
+        }
+
+
+
 
         public List<UserModel> ShowUsers()
         {

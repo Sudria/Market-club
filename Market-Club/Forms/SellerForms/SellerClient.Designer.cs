@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAddClient = new System.Windows.Forms.Button();
             this.btnAct = new System.Windows.Forms.Button();
             this.btnMod = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvClients = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAddClient = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -48,13 +48,29 @@
             this.panel3.Controls.Add(this.btnMod);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvClients);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1146, 694);
             this.panel3.TabIndex = 5;
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAddClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddClient.FlatAppearance.BorderSize = 0;
+            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClient.ForeColor = System.Drawing.Color.White;
+            this.btnAddClient.Location = new System.Drawing.Point(902, 105);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(102, 26);
+            this.btnAddClient.TabIndex = 15;
+            this.btnAddClient.Text = "Nuevo";
+            this.btnAddClient.UseVisualStyleBackColor = false;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // btnAct
             // 
@@ -108,13 +124,14 @@
             this.textBox1.Size = new System.Drawing.Size(218, 26);
             this.textBox1.TabIndex = 4;
             // 
-            // dataGridView1
+            // dgvClients
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1086, 523);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClients.Location = new System.Drawing.Point(26, 137);
+            this.dgvClients.Name = "dgvClients";
+            this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClients.Size = new System.Drawing.Size(1086, 523);
+            this.dgvClients.TabIndex = 1;
             // 
             // label2
             // 
@@ -126,22 +143,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Clientes";
             // 
-            // btnAddClient
-            // 
-            this.btnAddClient.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAddClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddClient.FlatAppearance.BorderSize = 0;
-            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClient.ForeColor = System.Drawing.Color.White;
-            this.btnAddClient.Location = new System.Drawing.Point(902, 105);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(102, 26);
-            this.btnAddClient.TabIndex = 15;
-            this.btnAddClient.Text = "Nuevo";
-            this.btnAddClient.UseVisualStyleBackColor = false;
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
-            // 
             // SellerClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,7 +152,7 @@
             this.Size = new System.Drawing.Size(1146, 694);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,7 +160,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvClients;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnMod;
         private System.Windows.Forms.Label label3;

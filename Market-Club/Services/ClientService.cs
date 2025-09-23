@@ -118,5 +118,33 @@ namespace Market_Club.Services
                 } : null;
             }
         }
+
+
+        public void UpdateClient(ClientModel client)
+        {
+            string query = @"UPDATE Clients
+                     SET Name = @Name,
+                         Surname = @Surname,
+                         Tel = @Tel,
+                         Birthdate = @Birthdate,
+                         Address = @Address,
+                         Email = @Email
+                     WHERE Cuit = @Cuit"; 
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@Cuit", client.Cuit);
+                cmd.Parameters.AddWithValue("@Name", client.Name);
+                cmd.Parameters.AddWithValue("@Surname", client.Surname);
+                cmd.Parameters.AddWithValue("@Tel", client.Tel);
+                cmd.Parameters.AddWithValue("@Birthdate", client.Birthdate);
+                cmd.Parameters.AddWithValue("@Address", client.Address);
+                cmd.Parameters.AddWithValue("@Email", client.Email);
+
+                conexion.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+            }
+        }
     }
 }
