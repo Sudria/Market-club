@@ -68,29 +68,89 @@
     <Compile Include="Forms\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\AgregarCliente.Designer.cs">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\EliminarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Forms\EliminarClientes.Designer.cs">
+      <DependentUpon>EliminarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form3.cs">
+    <Compile Include="Forms\EliminarSubCat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Forms\EliminarSubCat.Designer.cs">
+      <DependentUpon>EliminarSubCat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form4.cs">
+    <Compile Include="Forms\EliminarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="Forms\EliminarUsuarios.Designer.cs">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\gestionSubCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\gestionSubCat.Designer.cs">
+      <DependentUpon>gestionSubCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GestionUsuarioscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GestionUsuarioscs.Designer.cs">
+      <DependentUpon>GestionUsuarioscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\modificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\modificarCliente.Designer.cs">
+      <DependentUpon>modificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModificarSubCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModificarSubCat.Designer.cs">
+      <DependentUpon>ModificarSubCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModificarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModificarUsuarios.Designer.cs">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegistroProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistroProductos.Designer.cs">
+      <DependentUpon>RegistroProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AltaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AltaProducto.Designer.cs">
+      <DependentUpon>AltaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditarProductos.Designer.cs">
+      <DependentUpon>EditarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EliminarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EliminarProductos.Designer.cs">
+      <DependentUpon>EliminarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -118,17 +178,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_db_poliDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EliminarClientes.resx">
+      <DependentUpon>EliminarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EliminarSubCat.resx">
+      <DependentUpon>EliminarSubCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EliminarUsuarios.resx">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\gestionSubCat.resx">
+      <DependentUpon>gestionSubCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GestionUsuarioscs.resx">
+      <DependentUpon>GestionUsuarioscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\modificarCliente.resx">
+      <DependentUpon>modificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModificarSubCat.resx">
+      <DependentUpon>ModificarSubCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModificarUsuarios.resx">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistroProductos.resx">
+      <DependentUpon>RegistroProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AltaProducto.resx">
+      <DependentUpon>AltaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditarProductos.resx">
+      <DependentUpon>EditarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EliminarProductos.resx">
+      <DependentUpon>EliminarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -181,6 +271,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>db-poli.mdf</DependentUpon>
     </Content>
+    <None Include="Fotos\modificarUs.jpg" />
+    <None Include="Fotos\usuarios.jpeg" />
+    <None Include="Fotos\eliminar.png" />
+    <None Include="Fotos\modificar.jpeg" />
+    <None Include="Fotos\prototipo.png" />
+    <None Include="Fotos\agregar-cli.jpeg" />
+    <None Include="Fotos\add32.png" />
     <None Include="Fotos\delete.png" />
     <None Include="Fotos\user_delete.png" />
     <None Include="Fotos\user_add.png" />

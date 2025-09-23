@@ -2,7 +2,7 @@
 
 namespace Market_Club.Forms
 {
-    partial class Form1
+    partial class RegistroProductos
     {
         /// <summary>
         /// Required designer variable.
