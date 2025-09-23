@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms.CrudClient
 {
-    public partial class AdminHome : UserControl
+    public partial class ModificarCliente : Form
     {
-        public AdminHome()
+        public ModificarCliente()
         {
             InitializeComponent();
         }

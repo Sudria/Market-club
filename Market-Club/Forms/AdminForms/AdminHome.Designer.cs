@@ -1,4 +1,4 @@
-﻿namespace Market_Club.Forms.AdminForms
+﻿namespace Market_Club.Forms.CrudClient
 {
     partial class AdminHome
     {

@@ -40,18 +40,23 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.backUpAdmin = new System.Windows.Forms.Button();
             this.SupervisorDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // SupervisorDashboard
             // 
             this.SupervisorDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.SupervisorDashboard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SupervisorDashboard.Controls.Add(this.pictureBox9);
+            this.SupervisorDashboard.Controls.Add(this.backUpAdmin);
             this.SupervisorDashboard.Controls.Add(this.LogOut);
             this.SupervisorDashboard.Controls.Add(this.pictureBox7);
             this.SupervisorDashboard.Controls.Add(this.ButtonAboutMe);
@@ -200,6 +205,31 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.InitialImage")));
+            this.pictureBox9.Location = new System.Drawing.Point(12, 131);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 26;
+            this.pictureBox9.TabStop = false;
+            // 
+            // backUpAdmin
+            // 
+            this.backUpAdmin.FlatAppearance.BorderSize = 0;
+            this.backUpAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backUpAdmin.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.backUpAdmin.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.backUpAdmin.Location = new System.Drawing.Point(42, 131);
+            this.backUpAdmin.Name = "backUpAdmin";
+            this.backUpAdmin.Size = new System.Drawing.Size(155, 24);
+            this.backUpAdmin.TabIndex = 25;
+            this.backUpAdmin.Text = "BackUp";
+            this.backUpAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.backUpAdmin.UseVisualStyleBackColor = true;
+            // 
             // SupervisorPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,5 +262,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button ButtonAboutMe;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button backUpAdmin;
     }
 }

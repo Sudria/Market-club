@@ -1,4 +1,4 @@
-﻿namespace Market_Club.Forms.AdminForms
+﻿namespace Market_Club.Forms.CrudClient
 {
     partial class AdminUser
     {
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbCuit = new System.Windows.Forms.TextBox();
             this.btnDelUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnMod = new System.Windows.Forms.Button();
+            this.btnAct = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -44,8 +44,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txbCuit);
+            this.panel3.Controls.Add(this.btnAct);
+            this.panel3.Controls.Add(this.btnMod);
             this.panel3.Controls.Add(this.btnDelUser);
             this.panel3.Controls.Add(this.btnAddUser);
             this.panel3.Controls.Add(this.label1);
@@ -57,27 +57,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1146, 694);
             this.panel3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(624, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 19);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Buscar usuario por CUIT:";
-            // 
-            // txbCuit
-            // 
-            this.txbCuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txbCuit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbCuit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbCuit.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCuit.Location = new System.Drawing.Point(628, 94);
-            this.txbCuit.Name = "txbCuit";
-            this.txbCuit.Size = new System.Drawing.Size(218, 26);
-            this.txbCuit.TabIndex = 10;
             // 
             // btnDelUser
             // 
@@ -102,7 +81,7 @@
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(902, 94);
+            this.btnAddUser.Location = new System.Drawing.Point(794, 94);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(102, 26);
             this.btnAddUser.TabIndex = 8;
@@ -127,7 +106,7 @@
             this.txtName.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(26, 94);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(523, 26);
+            this.txtName.Size = new System.Drawing.Size(285, 26);
             this.txtName.TabIndex = 2;
             // 
             // dataGridView1
@@ -148,12 +127,42 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Usuarios";
             // 
-            // AdminUsers
+            // btnMod
+            // 
+            this.btnMod.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnMod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMod.FlatAppearance.BorderSize = 0;
+            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMod.ForeColor = System.Drawing.Color.White;
+            this.btnMod.Location = new System.Drawing.Point(902, 94);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(102, 26);
+            this.btnMod.TabIndex = 15;
+            this.btnMod.Text = "Modificar";
+            this.btnMod.UseVisualStyleBackColor = false;
+            // 
+            // btnAct
+            // 
+            this.btnAct.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAct.FlatAppearance.BorderSize = 0;
+            this.btnAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAct.ForeColor = System.Drawing.Color.White;
+            this.btnAct.Location = new System.Drawing.Point(317, 94);
+            this.btnAct.Name = "btnAct";
+            this.btnAct.Size = new System.Drawing.Size(102, 26);
+            this.btnAct.TabIndex = 16;
+            this.btnAct.Text = "Actualizar";
+            this.btnAct.UseVisualStyleBackColor = false;
+            // 
+            // AdminUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
-            this.Name = "AdminUsers";
+            this.Name = "AdminUser";
             this.Size = new System.Drawing.Size(1146, 694);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -165,13 +174,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbCuit;
         private System.Windows.Forms.Button btnDelUser;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnMod;
+        private System.Windows.Forms.Button btnAct;
     }
 }

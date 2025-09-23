@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Market_Club.Forms.AdminForms
+namespace Market_Club.Forms.CrudClient
 {
     public partial class AdminProduct : UserControl
     {
@@ -16,5 +16,7 @@ namespace Market_Club.Forms.AdminForms
         {
             InitializeComponent();
         }
+
+
     }
 }

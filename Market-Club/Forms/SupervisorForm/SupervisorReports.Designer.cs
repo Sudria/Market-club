@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBoxConsult = new System.Windows.Forms.ComboBox();
             this.btnDeleteClient = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxConsult = new System.Windows.Forms.ComboBox();
-            this.labelOp1 = new System.Windows.Forms.Label();
-            this.labelOp2 = new System.Windows.Forms.Label();
-            this.comboBoxOp1 = new System.Windows.Forms.ComboBox();
-            this.comboBoxOp2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,10 +46,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.comboBoxOp2);
-            this.panel3.Controls.Add(this.comboBoxOp1);
-            this.panel3.Controls.Add(this.labelOp2);
-            this.panel3.Controls.Add(this.labelOp1);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.dateTimePicker2);
+            this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.comboBoxConsult);
             this.panel3.Controls.Add(this.btnDeleteClient);
             this.panel3.Controls.Add(this.btnAddClient);
@@ -61,6 +61,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1146, 694);
             this.panel3.TabIndex = 6;
+            // 
+            // comboBoxConsult
+            // 
+            this.comboBoxConsult.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold);
+            this.comboBoxConsult.FormattingEnabled = true;
+            this.comboBoxConsult.Location = new System.Drawing.Point(26, 87);
+            this.comboBoxConsult.Name = "comboBoxConsult";
+            this.comboBoxConsult.Size = new System.Drawing.Size(255, 37);
+            this.comboBoxConsult.TabIndex = 8;
             // 
             // btnDeleteClient
             // 
@@ -121,52 +130,39 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Reportes";
             // 
-            // comboBoxConsult
+            // label4
             // 
-            this.comboBoxConsult.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold);
-            this.comboBoxConsult.FormattingEnabled = true;
-            this.comboBoxConsult.Location = new System.Drawing.Point(26, 87);
-            this.comboBoxConsult.Name = "comboBoxConsult";
-            this.comboBoxConsult.Size = new System.Drawing.Size(186, 37);
-            this.comboBoxConsult.TabIndex = 8;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(623, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 19);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Hasta:";
             // 
-            // labelOp1
+            // label1
             // 
-            this.labelOp1.AutoSize = true;
-            this.labelOp1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOp1.Location = new System.Drawing.Point(296, 65);
-            this.labelOp1.Name = "labelOp1";
-            this.labelOp1.Size = new System.Drawing.Size(0, 19);
-            this.labelOp1.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(379, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 19);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Desde:";
             // 
-            // labelOp2
+            // dateTimePicker2
             // 
-            this.labelOp2.AutoSize = true;
-            this.labelOp2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOp2.Location = new System.Drawing.Point(565, 65);
-            this.labelOp2.Name = "labelOp2";
-            this.labelOp2.Size = new System.Drawing.Size(0, 19);
-            this.labelOp2.TabIndex = 11;
+            this.dateTimePicker2.Location = new System.Drawing.Point(383, 109);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 21;
             // 
-            // comboBoxOp1
+            // dateTimePicker1
             // 
-            this.comboBoxOp1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold);
-            this.comboBoxOp1.FormattingEnabled = true;
-            this.comboBoxOp1.Location = new System.Drawing.Point(300, 87);
-            this.comboBoxOp1.Name = "comboBoxOp1";
-            this.comboBoxOp1.Size = new System.Drawing.Size(186, 37);
-            this.comboBoxOp1.TabIndex = 12;
-            this.comboBoxOp1.Visible = false;
-            // 
-            // comboBoxOp2
-            // 
-            this.comboBoxOp2.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold);
-            this.comboBoxOp2.FormattingEnabled = true;
-            this.comboBoxOp2.Location = new System.Drawing.Point(571, 87);
-            this.comboBoxOp2.Name = "comboBoxOp2";
-            this.comboBoxOp2.Size = new System.Drawing.Size(186, 37);
-            this.comboBoxOp2.TabIndex = 13;
-            this.comboBoxOp2.Visible = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(627, 109);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 20;
             // 
             // SupervisorReports
             // 
@@ -191,9 +187,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxConsult;
-        private System.Windows.Forms.Label labelOp2;
-        private System.Windows.Forms.Label labelOp1;
-        private System.Windows.Forms.ComboBox comboBoxOp1;
-        private System.Windows.Forms.ComboBox comboBoxOp2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

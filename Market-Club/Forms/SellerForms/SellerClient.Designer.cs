@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAddClient = new System.Windows.Forms.Button();
+            this.btnAct = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtProductName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAddClient = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -44,10 +44,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnAddClient);
+            this.panel3.Controls.Add(this.btnAct);
+            this.panel3.Controls.Add(this.btnMod);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txtProductName);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -56,26 +56,42 @@
             this.panel3.Size = new System.Drawing.Size(1146, 694);
             this.panel3.TabIndex = 5;
             // 
-            // btnAddClient
+            // btnAct
             // 
-            this.btnAddClient.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAddClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddClient.FlatAppearance.BorderSize = 0;
-            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClient.ForeColor = System.Drawing.Color.White;
-            this.btnAddClient.Location = new System.Drawing.Point(777, 105);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(102, 26);
-            this.btnAddClient.TabIndex = 6;
-            this.btnAddClient.Text = "Nuevo";
-            this.btnAddClient.UseVisualStyleBackColor = false;
+            this.btnAct.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAct.FlatAppearance.BorderSize = 0;
+            this.btnAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAct.ForeColor = System.Drawing.Color.White;
+            this.btnAct.Location = new System.Drawing.Point(250, 100);
+            this.btnAct.Name = "btnAct";
+            this.btnAct.Size = new System.Drawing.Size(102, 26);
+            this.btnAct.TabIndex = 14;
+            this.btnAct.Text = "Actualizar";
+            this.btnAct.UseVisualStyleBackColor = false;
+            // 
+            // btnMod
+            // 
+            this.btnMod.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnMod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMod.FlatAppearance.BorderSize = 0;
+            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMod.ForeColor = System.Drawing.Color.White;
+            this.btnMod.Location = new System.Drawing.Point(1010, 105);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(102, 26);
+            this.btnMod.TabIndex = 13;
+            this.btnMod.Text = "Modificar";
+            this.btnMod.UseVisualStyleBackColor = false;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(890, 68);
+            this.label3.Location = new System.Drawing.Point(22, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 19);
             this.label3.TabIndex = 5;
@@ -87,31 +103,10 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(894, 105);
+            this.textBox1.Location = new System.Drawing.Point(26, 100);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(218, 26);
             this.textBox1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Buscar cliente por cuit:";
-            // 
-            // txtProductName
-            // 
-            this.txtProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProductName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProductName.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(26, 105);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(218, 26);
-            this.txtProductName.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -131,6 +126,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Clientes";
             // 
+            // btnAddClient
+            // 
+            this.btnAddClient.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAddClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddClient.FlatAppearance.BorderSize = 0;
+            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClient.ForeColor = System.Drawing.Color.White;
+            this.btnAddClient.Location = new System.Drawing.Point(902, 105);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(102, 26);
+            this.btnAddClient.TabIndex = 15;
+            this.btnAddClient.Text = "Nuevo";
+            this.btnAddClient.UseVisualStyleBackColor = false;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
             // SellerClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,12 +159,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnMod;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnAct;
         private System.Windows.Forms.Button btnAddClient;
     }
 }
