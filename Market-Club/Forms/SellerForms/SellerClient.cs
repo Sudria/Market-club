@@ -1,4 +1,6 @@
-﻿using Market_Club.Forms.CrudClient;
+﻿using Market_Club.Class;
+using Market_Club.Controllers;
+using Market_Club.Forms.CrudClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +28,18 @@ namespace Market_Club.Forms.SellerForms
 
         private void btnMod_Click(object sender, EventArgs e)
         {
-            ModificarCliente agregarClienteForm = new ModificarCliente();
-            agregarClienteForm.ShowDialog();
+            ClientModel clientModel = new ClientModel();
+
+            foreach (DataGridViewRow row in dgvClients.SelectedRows)
+            {
+                clientModel.Cuit = Convert.ToInt32(row.Cells["Cuit"].Value);
+                clientModel.Name = row.Cells["Name"].Value.ToString();
+                clientModel.Surname = row.Cells["Surname"].Value.ToString();
+                clientModel.Tel = row.Cells["Tel"].Value.ToString();
+                clientModel.Birthdate = row.Cells["Birthdate"].Value.ToString();
+                clientModel.Address = row.Cells["Address"].Value.ToString();
+                clientModel.Email = row.Cells["Email"].Value.ToString();
+            }
         }
     }
 }

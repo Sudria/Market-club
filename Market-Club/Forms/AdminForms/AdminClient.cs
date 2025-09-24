@@ -1,4 +1,5 @@
-﻿using Market_Club.Controllers;
+﻿using Market_Club.Class;
+using Market_Club.Controllers;
 using System;
 using System.Windows.Forms;
 
@@ -19,7 +20,28 @@ namespace Market_Club.Forms.CrudClient
 
         private void btnMod_Click(object sender, EventArgs e)
         {
-            ModificarCliente modificarClienteForm = new ModificarCliente();
+            ClientModel clientModel = new ClientModel();
+
+
+            if (dgvClients.SelectedRows.Count > 0)
+            {
+                DataGridViewRow fila = dgvClients.SelectedRows[0];
+
+                clientModel.Cuit = Convert.ToInt32(fila.Cells["Cuit"].Value);
+                clientModel.Name = fila.Cells["Name"].Value.ToString();
+                clientModel.Surname = fila.Cells["Surname"].Value.ToString();
+                clientModel.Tel = fila.Cells["Tel"].Value.ToString();
+                clientModel.Birthdate = fila.Cells["Birthdate"].Value.ToString();
+                clientModel.Address = fila.Cells["Address"].Value.ToString();
+                clientModel.Email = fila.Cells["Email"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila para modificar.");
+                return;
+            }
+
+            ModificarCliente modificarClienteForm = new ModificarCliente(clientModel);
             modificarClienteForm.ShowDialog();
         }
 

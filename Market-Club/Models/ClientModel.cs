@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Market_Club.Class
 {
-    internal class ClientModel
+    public class ClientModel
     {
         public int Cuit { get; set; }
         public string Name { get; set; }

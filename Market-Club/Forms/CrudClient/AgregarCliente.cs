@@ -1,4 +1,13 @@
-﻿using System;
+﻿using Market_Club.Class;
+using Market_Club.Controllers;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Market_Club.Forms.CrudClient
@@ -9,11 +18,31 @@ namespace Market_Club.Forms.CrudClient
         {
             InitializeComponent();
         }
-        
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
+            ClientController clientController = new ClientController();
+            ClientModel client = new ClientModel();
 
+            client.Cuit = int.Parse(txtCuit.Text);
+            client.Address = txtDireccion.Text;
+            client.Email = txtEmail.Text;
+            client.Name = txtNombre.Text;
+            client.Tel = txtTel.Text;
+            client.Surname = txtApellido.Text;
+            client.Birthdate = dtpFechaNac.Text;
+
+            if (clientController.InsertClient(client))
+            {
+                MessageBox.Show("Cliente agregado con exito");
+            }
+            else
+            {
+                return;
+            }
+
+
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

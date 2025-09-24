@@ -12,21 +12,44 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms.CrudUser
 {
-    public partial class AgregarUsuario : Form
+    public partial class ModificarUsuario : Form
     {
-        public AgregarUsuario()
+        public ModificarUsuario(UserModel user)
         {
             InitializeComponent();
+            txtUsername.Text = user.Username;
+            txtName.Text = user.Name;
+            txtSurname.Text = user.Surname;
+            txtEmail.Text = user.Email;
+            txtPassword.Text = user.Password;
+            cmbRol.SelectedIndex  = user.RolId - 1;
+            txtPassword.Text = user.Password;
+            txtRepeatPass.Text = user.Password;
+
         }
 
-        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            bool respuesta = MessageBox.Show("¿Está seguro que desea cancelar la modificacion?", "Cancelar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+
+            if (respuesta)
+            {
+                this.Close();
+            }
+            return;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
             UserModel userModel = new UserModel();
 
-            userModel.Name = txtNombre.Text;
-            userModel.Surname = txtApellido.Text;
+            userModel.Name = txtName.Text;
+            userModel.Surname = txtSurname.Text;
             userModel.Email = txtEmail.Text;
             userModel.Username = txtUsername.Text;
+
             if (cmbRol.Text.Contains("Admin"))
             {
                 userModel.RolId = 1;
@@ -44,7 +67,7 @@ namespace Market_Club.Forms.CrudUser
                 MessageBox.Show("Por favor, seleccione un rol válido.");
                 return;
             }
-            
+
             userModel.Password = txtPassword.Text;
 
             if (userModel.Password != txtRepeatPass.Text)
@@ -54,25 +77,11 @@ namespace Market_Club.Forms.CrudUser
             }
 
             UserController userController = new UserController();
+
             if (userController.AddUser(userModel))
-            {
-             this.Close();
-            }
-
-
-        }
-
-
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            bool respuesta = MessageBox.Show("¿Está seguro que desea cancelar el registro?", "Cancelar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
-
-            if (respuesta)
             {
                 this.Close();
             }
-            return;
         }
     }
 }
