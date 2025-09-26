@@ -89,10 +89,10 @@ namespace Market_Club.Forms.CrudClient
 
         private void btnGraphics_Click(object sender, EventArgs e)
         {
-            AdminReport adminReports = new AdminReport();
+            AdminGraphics adminGraphics = new AdminGraphics();
             Dashboard parentForm = this.FindForm() as Dashboard;
             parentForm.contentPanel.Controls.Clear();
-            parentForm.contentPanel.Controls.Add(adminReports);
+            parentForm.contentPanel.Controls.Add(adminGraphics);
         }
     }
 }

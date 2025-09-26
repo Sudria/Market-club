@@ -16,5 +16,30 @@ namespace Market_Club.Forms.AdminForms
         {
             InitializeComponent();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            if (cbConsult.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar una consulta.",
+                    "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (dtpHasta.Value.Date > DateTime.Today)
+            {
+                MessageBox.Show("Hasta: " + dtpHasta.Value.ToString() + "datatime: " + DateTime.Today);
+                MessageBox.Show("La fecha 'Hasta' no puede ser mayor a la fecha actual.",
+                    "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (dtpDesde.Value.Date > dtpHasta.Value)
+            {
+                MessageBox.Show("La fecha 'Desde' no puede ser mayor a la fecha 'Hasta'.",
+                    "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Reporte generado exitosamente.",
+                    "Reporte", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
