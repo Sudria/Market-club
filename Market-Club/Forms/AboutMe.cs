@@ -29,7 +29,7 @@ namespace Market_Club.Forms
                 case 2:
                     return "Supervisor";
                 case 3:
-                    return "Seller";
+                    return "Vendedor";
                 default:
                     return "Unknown Role";
             }

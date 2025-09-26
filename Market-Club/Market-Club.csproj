@@ -115,11 +115,11 @@
     <Compile Include="Forms\AdminForms\AdminUser.Designer.cs">
       <DependentUpon>AdminUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BackUp\BackUps.cs">
+    <Compile Include="Forms\FormBackUp\BackUpsForms.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\BackUp\BackUps.Designer.cs">
-      <DependentUpon>BackUps.cs</DependentUpon>
+    <Compile Include="Forms\FormBackUp\BackUpsForms.Designer.cs">
+      <DependentUpon>BackUpsForms.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CrudClient\AgregarCliente.cs">
       <SubType>Form</SubType>
@@ -267,8 +267,8 @@
     <EmbeddedResource Include="Forms\AdminForms\AdminUser.resx">
       <DependentUpon>AdminUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BackUp\BackUps.resx">
-      <DependentUpon>BackUps.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormBackUp\BackUpsForms.resx">
+      <DependentUpon>BackUpsForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CrudClient\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
@@ -409,6 +409,7 @@
     <Content Include="icon\684488.jpg" />
     <Content Include="icon\9e84e075585f2bd99892ff4f1cfd9b77.jpg" />
     <Content Include="icon\about-us.png" />
+    <None Include="icon\backup black.png" />
     <Content Include="icon\combination-chart.png" />
     <Content Include="icon\contact.png" />
     <Content Include="icon\gadget.png" />
@@ -419,6 +420,7 @@
     <Content Include="icon\man.png" />
     <Content Include="icon\menu-button-of-three-horizontal-lines.png" />
     <Content Include="icon\notification %281%29.png" />
+    <None Include="icon\restore backup.png" />
     <Content Include="icon\settings-gears.png" />
     <Content Include="icon\shutdown.png" />
     <Content Include="icon\user.png" />

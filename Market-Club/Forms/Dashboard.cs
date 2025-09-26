@@ -29,35 +29,6 @@ namespace Market_Club
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Home_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void AdminButton_Click(object sender, EventArgs e)
         {
@@ -117,7 +88,10 @@ namespace Market_Club
                     break;
 
                 case 2: // Supervisor
+
                     RolLabel.Text = "Supervisor";
+                    SupervisorPanel supervisorPanel = new SupervisorPanel();
+                    dashboardPanel.Controls.Add(supervisorPanel);
                     break;
 
                 case 3: // Vendedor

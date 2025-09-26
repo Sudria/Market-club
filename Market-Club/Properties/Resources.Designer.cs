@@ -73,6 +73,16 @@ namespace Market_Club.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backup_black {
+            get {
+                object obj = ResourceManager.GetObject("backup black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap categorias {
             get {
                 object obj = ResourceManager.GetObject("categorias", resourceCulture);
@@ -116,6 +126,16 @@ namespace Market_Club.Properties {
         internal static System.Drawing.Bitmap fondo_claro1 {
             get {
                 object obj = ResourceManager.GetObject("fondo_claro1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restore_backup {
+            get {
+                object obj = ResourceManager.GetObject("restore backup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
