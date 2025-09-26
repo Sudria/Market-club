@@ -60,7 +60,7 @@ namespace Market_Club.Forms.SupervisorForm
         {
             Dashboard parentForm = this.FindForm() as Dashboard;
             parentForm.contentPanel.Controls.Clear();
-            parentForm.contentPanel.Controls.Add(new BackUps());
+            parentForm.contentPanel.Controls.Add(new BackUpsForms());
         }
     }
 }
