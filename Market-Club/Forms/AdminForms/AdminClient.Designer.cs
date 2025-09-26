@@ -31,7 +31,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMod = new System.Windows.Forms.Button();
             this.btnAct = new System.Windows.Forms.Button();
-            this.btnDelProduct = new System.Windows.Forms.Button();
+            this.btnDelClient = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnMod);
             this.panel3.Controls.Add(this.btnAct);
-            this.panel3.Controls.Add(this.btnDelProduct);
+            this.panel3.Controls.Add(this.btnDelClient);
             this.panel3.Controls.Add(this.btnAddClient);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.textBox1);
@@ -90,20 +90,21 @@
             this.btnAct.UseVisualStyleBackColor = false;
             this.btnAct.Click += new System.EventHandler(this.btnAct_Click);
             // 
-            // btnDelProduct
+            // btnDelClient
             // 
-            this.btnDelProduct.BackColor = System.Drawing.Color.IndianRed;
-            this.btnDelProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelProduct.FlatAppearance.BorderSize = 0;
-            this.btnDelProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelProduct.ForeColor = System.Drawing.Color.White;
-            this.btnDelProduct.Location = new System.Drawing.Point(1010, 103);
-            this.btnDelProduct.Name = "btnDelProduct";
-            this.btnDelProduct.Size = new System.Drawing.Size(102, 26);
-            this.btnDelProduct.TabIndex = 10;
-            this.btnDelProduct.Text = "Eliminar";
-            this.btnDelProduct.UseVisualStyleBackColor = false;
+            this.btnDelClient.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDelClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelClient.FlatAppearance.BorderSize = 0;
+            this.btnDelClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelClient.ForeColor = System.Drawing.Color.White;
+            this.btnDelClient.Location = new System.Drawing.Point(1010, 103);
+            this.btnDelClient.Name = "btnDelClient";
+            this.btnDelClient.Size = new System.Drawing.Size(102, 26);
+            this.btnDelClient.TabIndex = 10;
+            this.btnDelClient.Text = "Eliminar";
+            this.btnDelClient.UseVisualStyleBackColor = false;
+            this.btnDelClient.Click += new System.EventHandler(this.btnDelClient_Click);
             // 
             // btnAddClient
             // 
@@ -187,7 +188,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgvClients;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDelProduct;
+        private System.Windows.Forms.Button btnDelClient;
         private System.Windows.Forms.Button btnAct;
         private System.Windows.Forms.Button btnMod;
     }

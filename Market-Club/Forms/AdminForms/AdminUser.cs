@@ -23,7 +23,7 @@ namespace Market_Club.Forms.CrudClient
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            AgregarCliente agregarUsuario = new AgregarCliente();
+            AgregarUsuario agregarUsuario = new AgregarUsuario();
             agregarUsuario.ShowDialog();
         }
 
@@ -46,6 +46,7 @@ namespace Market_Club.Forms.CrudClient
                 {
                     int id = Convert.ToInt32(dgvUsers.CurrentRow.Cells["Id"].Value);
                     userController.DeleteUser(id);
+                    userController.LoadUsers(dgvUsers);
                 }
                 else
                 {

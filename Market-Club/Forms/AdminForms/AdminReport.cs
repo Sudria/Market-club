@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Market_Club.Forms.SupervisorForm
+namespace Market_Club.Forms.AdminForms
 {
-    public partial class SupervisorReports : UserControl
+    public partial class AdminReport : UserControl
     {
-        public SupervisorReports()
+        public AdminReport()
         {
             InitializeComponent();
         }
@@ -41,9 +41,10 @@ namespace Market_Club.Forms.SupervisorForm
                 MessageBox.Show("Reporte generado exitosamente.",
                     "Reporte", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDeleteReport_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Debe seleecionar un reporte para eliminarlo.", "Eliminar Reporte", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

@@ -31,11 +31,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.btnAct = new System.Windows.Forms.Button();
             this.btnMod = new System.Windows.Forms.Button();
-            this.btnAddClient = new System.Windows.Forms.Button();
+            this.btnNewSell = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -49,11 +49,11 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.dateTimePicker2);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.dtpDesde);
+            this.panel3.Controls.Add(this.dtpHasta);
             this.panel3.Controls.Add(this.btnAct);
             this.panel3.Controls.Add(this.btnMod);
-            this.panel3.Controls.Add(this.btnAddClient);
+            this.panel3.Controls.Add(this.btnNewSell);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.dataGridView1);
@@ -84,19 +84,19 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Desde:";
             // 
-            // dateTimePicker2
+            // dtpDesde
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(261, 111);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 17;
+            this.dtpDesde.Location = new System.Drawing.Point(261, 111);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(200, 20);
+            this.dtpDesde.TabIndex = 17;
             // 
-            // dateTimePicker1
+            // dtpHasta
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(505, 111);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtpHasta.Location = new System.Drawing.Point(505, 111);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(200, 20);
+            this.dtpHasta.TabIndex = 16;
             // 
             // btnAct
             // 
@@ -112,6 +112,7 @@
             this.btnAct.TabIndex = 15;
             this.btnAct.Text = "Actualizar";
             this.btnAct.UseVisualStyleBackColor = false;
+            this.btnAct.Click += new System.EventHandler(this.btnAct_Click);
             // 
             // btnMod
             // 
@@ -128,20 +129,21 @@
             this.btnMod.Text = "Modificar";
             this.btnMod.UseVisualStyleBackColor = false;
             // 
-            // btnAddClient
+            // btnNewSell
             // 
-            this.btnAddClient.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAddClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddClient.FlatAppearance.BorderSize = 0;
-            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClient.ForeColor = System.Drawing.Color.White;
-            this.btnAddClient.Location = new System.Drawing.Point(902, 105);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(102, 26);
-            this.btnAddClient.TabIndex = 8;
-            this.btnAddClient.Text = "Nuevo";
-            this.btnAddClient.UseVisualStyleBackColor = false;
+            this.btnNewSell.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnNewSell.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewSell.FlatAppearance.BorderSize = 0;
+            this.btnNewSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewSell.ForeColor = System.Drawing.Color.White;
+            this.btnNewSell.Location = new System.Drawing.Point(902, 105);
+            this.btnNewSell.Name = "btnNewSell";
+            this.btnNewSell.Size = new System.Drawing.Size(102, 26);
+            this.btnNewSell.TabIndex = 8;
+            this.btnNewSell.Text = "Nuevo";
+            this.btnNewSell.UseVisualStyleBackColor = false;
+            this.btnNewSell.Click += new System.EventHandler(this.btnNewSell_Click);
             // 
             // label3
             // 
@@ -204,12 +206,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnAddClient;
+        private System.Windows.Forms.Button btnNewSell;
         private System.Windows.Forms.Button btnMod;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Button btnAct;
     }
 }

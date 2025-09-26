@@ -1,4 +1,5 @@
-﻿using MarketClub;
+﻿using Market_Club.Forms.BackUp;
+using MarketClub;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,6 +54,13 @@ namespace Market_Club.Forms.SupervisorForm
 
             parentForm.contentPanel.Controls.Clear();
             parentForm.contentPanel.Controls.Add(new SupervisorReports());
+        }
+
+        private void btnBackUp_Click(object sender, EventArgs e)
+        {
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(new BackUps());
         }
     }
 }

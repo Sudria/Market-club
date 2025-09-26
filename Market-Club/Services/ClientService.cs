@@ -85,7 +85,7 @@ namespace Market_Club.Services
             return clients;
         }
 
-        public void DeleteClient(int cuit)
+        public bool DeleteClient(int cuit)
         {
             string query = "DELETE FROM Clients WHERE Cuit = @Cuit";
             using (SqlConnection conexion = new SqlConnection(connectionString))
@@ -94,7 +94,9 @@ namespace Market_Club.Services
                 cmd.Parameters.AddWithValue("@Cuit", cuit);
                 conexion.Open();
                 cmd.ExecuteNonQuery();
+                return true;
             }
+            return false;
         }
 
         public ClientModel ShowClientByCuit(int cuit)
