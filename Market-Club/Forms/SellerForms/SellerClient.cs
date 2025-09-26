@@ -15,9 +15,12 @@ namespace Market_Club.Forms.SellerForms
 {
     public partial class SellerClient : UserControl
     {
+        ClientController clientController = new ClientController();
+
         public SellerClient()
         {
             InitializeComponent();
+            dgvClients.DataSource = clientController.ShowClients();
         }
 
         private void btnAddClient_Click(object sender, EventArgs e)
@@ -40,6 +43,12 @@ namespace Market_Club.Forms.SellerForms
                 clientModel.Address = row.Cells["Address"].Value.ToString();
                 clientModel.Email = row.Cells["Email"].Value.ToString();
             }
+        }
+
+        private void btnAct_Click(object sender, EventArgs e)
+        {
+            ClientController clientController = new ClientController();
+            dgvClients.DataSource = clientController.ShowClients();
         }
     }
 }

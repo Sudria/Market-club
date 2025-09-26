@@ -7,9 +7,12 @@ namespace Market_Club.Forms.CrudClient
 {
     public partial class AdminClient : UserControl
     {
+        ClientController clientController = new ClientController();
+
         public AdminClient()
         {
             InitializeComponent();
+            dgvClients.DataSource = clientController.ShowClients();
         }
 
         private void btnAddClient_Click(object sender, EventArgs e)

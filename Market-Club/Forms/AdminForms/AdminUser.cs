@@ -16,9 +16,13 @@ namespace Market_Club.Forms.CrudClient
 {
     public partial class AdminUser : UserControl
     {
+        UserController userController = new UserController();
+
         public AdminUser()
         {
             InitializeComponent();
+            userController.LoadUsers(dgvUsers);
+
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -29,7 +33,6 @@ namespace Market_Club.Forms.CrudClient
 
         private void btnAct_Click(object sender, EventArgs e)
         {
-            UserController userController = new UserController();
             userController.LoadUsers(dgvUsers);
         }
 
