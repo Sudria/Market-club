@@ -51,5 +51,25 @@ namespace Market_Club.Forms.CrudClient
             dgvClients.DataSource = clientController.ShowClients();
 
         }
+
+        private void btnDelClient_Click(object sender, EventArgs e)
+        {
+            ClientController clientController = new ClientController();
+            ClientModel clientModel = new ClientModel();
+
+            if (dgvClients.SelectedRows.Count > 0)
+            {
+                DataGridViewRow fila = dgvClients.SelectedRows[0];
+                clientModel.Cuit = Convert.ToInt32(fila.Cells["Cuit"].Value);
+                clientController.DeleteClient(clientModel.Cuit);
+                MessageBox.Show("Cliente eliminado con exito");
+                dgvClients.DataSource = clientController.ShowClients();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila para eliminar.");
+                return;
+            }
+        }
     }
 }

@@ -115,5 +115,16 @@ namespace Market_Club.Controllers
         {
             return _clientService.ShowClients();
         }
+
+        public bool DeleteClient(int cuit)
+        {
+            if (!Validator.isValidNum(cuit.ToString(), "Cuit"))
+            {
+                return false;
+            }
+           
+            return _clientService.DeleteClient(cuit);
+           
+        }
     }
 }

@@ -66,7 +66,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Forms\AboutMe.cs">
       <SubType>UserControl</SubType>
@@ -79,6 +78,12 @@
     </Compile>
     <Compile Include="Forms\AdminForms\AdminClient.Designer.cs">
       <DependentUpon>AdminClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminGraphics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminGraphics.Designer.cs">
+      <DependentUpon>AdminGraphics.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\AdminHome.cs">
       <SubType>UserControl</SubType>
@@ -98,11 +103,23 @@
     <Compile Include="Forms\AdminForms\AdminProduct.Designer.cs">
       <DependentUpon>AdminProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminForms\AdminReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminReport.Designer.cs">
+      <DependentUpon>AdminReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\AdminUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\AdminForms\AdminUser.Designer.cs">
       <DependentUpon>AdminUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BackUp\BackUps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\BackUp\BackUps.Designer.cs">
+      <DependentUpon>BackUps.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CrudClient\AgregarCliente.cs">
       <SubType>Form</SubType>
@@ -115,6 +132,30 @@
     </Compile>
     <Compile Include="Forms\CrudClient\ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrudProduct\AgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrudProduct\AgregarCategoria.Designer.cs">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrudProduct\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrudProduct\AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrudProduct\AgregarSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrudProduct\AgregarSubCategoria.Designer.cs">
+      <DependentUpon>AgregarSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrudSell\AgregarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrudSell\AgregarVenta.Designer.cs">
+      <DependentUpon>AgregarVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CrudUser\AgregarUsuario.cs">
       <SubType>Form</SubType>
@@ -208,6 +249,9 @@
     <EmbeddedResource Include="Forms\AdminForms\AdminClient.resx">
       <DependentUpon>AdminClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminGraphics.resx">
+      <DependentUpon>AdminGraphics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,14 +261,32 @@
     <EmbeddedResource Include="Forms\AdminForms\AdminProduct.resx">
       <DependentUpon>AdminProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminReport.resx">
+      <DependentUpon>AdminReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminUser.resx">
       <DependentUpon>AdminUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BackUp\BackUps.resx">
+      <DependentUpon>BackUps.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CrudClient\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CrudClient\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrudProduct\AgregarCategoria.resx">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrudProduct\AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrudProduct\AgregarSubCategoria.resx">
+      <DependentUpon>AgregarSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrudSell\AgregarVenta.resx">
+      <DependentUpon>AgregarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CrudUser\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>

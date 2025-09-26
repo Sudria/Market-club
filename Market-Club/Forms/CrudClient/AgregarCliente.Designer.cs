@@ -180,9 +180,12 @@
             // dtpFechaNac
             // 
             this.dtpFechaNac.Location = new System.Drawing.Point(226, 252);
+            this.dtpFechaNac.MaxDate = new System.DateTime(2025, 9, 26, 0, 0, 0, 0);
+            this.dtpFechaNac.MinDate = new System.DateTime(1900, 12, 1, 0, 0, 0, 0);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(209, 20);
             this.dtpFechaNac.TabIndex = 39;
+            this.dtpFechaNac.Value = new System.DateTime(2025, 9, 26, 0, 0, 0, 0);
             // 
             // btnCancel
             // 

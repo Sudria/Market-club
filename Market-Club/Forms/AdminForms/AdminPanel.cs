@@ -1,4 +1,5 @@
-﻿using MarketClub;
+﻿using Market_Club.Forms.AdminForms;
+using MarketClub;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,23 @@ namespace Market_Club.Forms.CrudClient
 
             parentForm.contentPanel.Controls.Clear();
             parentForm.contentPanel.Controls.Add(adminClient);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            AdminReport adminReports = new AdminReport();
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(adminReports);
+
+        }
+
+        private void btnGraphics_Click(object sender, EventArgs e)
+        {
+            AdminReport adminReports = new AdminReport();
+            Dashboard parentForm = this.FindForm() as Dashboard;
+            parentForm.contentPanel.Controls.Clear();
+            parentForm.contentPanel.Controls.Add(adminReports);
         }
     }
 }

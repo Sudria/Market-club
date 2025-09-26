@@ -117,6 +117,7 @@
             this.btnAddProduct.TabIndex = 8;
             this.btnAddProduct.Text = "Nuevo";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // label1
             // 

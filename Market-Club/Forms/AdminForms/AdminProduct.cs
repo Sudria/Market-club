@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Market_Club.Forms.CrudProduct;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,10 @@ namespace Market_Club.Forms.CrudClient
             InitializeComponent();
         }
 
-
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            agregarProducto.ShowDialog();
+        }
     }
 }
