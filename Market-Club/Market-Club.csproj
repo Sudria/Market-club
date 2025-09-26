@@ -409,6 +409,7 @@
     <Content Include="icon\684488.jpg" />
     <Content Include="icon\9e84e075585f2bd99892ff4f1cfd9b77.jpg" />
     <Content Include="icon\about-us.png" />
+    <None Include="icon\backup black.png" />
     <Content Include="icon\combination-chart.png" />
     <Content Include="icon\contact.png" />
     <Content Include="icon\gadget.png" />
@@ -419,6 +420,7 @@
     <Content Include="icon\man.png" />
     <Content Include="icon\menu-button-of-three-horizontal-lines.png" />
     <Content Include="icon\notification %281%29.png" />
+    <None Include="icon\restore backup.png" />
     <Content Include="icon\settings-gears.png" />
     <Content Include="icon\shutdown.png" />
     <Content Include="icon\user.png" />
