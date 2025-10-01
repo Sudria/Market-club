@@ -13,6 +13,8 @@ namespace Market_Club.Forms.CrudProduct
 {
     public partial class AgregarProducto : Form
     {
+        private object txtRutaImagen;
+
         public AgregarProducto()
         {
             InitializeComponent();
@@ -47,11 +49,14 @@ namespace Market_Club.Forms.CrudProduct
             {
                 ofd.Title = "Seleccionar imagen";
                 ofd.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                ofd.InitialDirectory = @"C:\Users\Alejandrina\Desktop\Market-Club\Market-Club\icon"; // 📌 Carpeta inicial sugerida (podés cambiarla)
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     pbImage.Image = Image.FromFile(ofd.FileName);
                     pbImage.SizeMode = PictureBoxSizeMode.Zoom; // Ajusta la imagen al tamaño del PictureBox
+                    string fileName = ofd.FileName;
+                    txtRutaImagen.Text = ofd.FileName;
                 }
             }
         }
