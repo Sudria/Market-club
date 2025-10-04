@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms
 {
-    public partial class Form4 : Form
+    public partial class EliminarProductos : Form
     {
         string connectionString = "Data Source=.;Initial Catalog=TuBase;Integrated Security=True;";
 
-        public Form4()
+        public EliminarProductos()
         {
             InitializeComponent();
         }

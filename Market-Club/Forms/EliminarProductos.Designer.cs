@@ -2,7 +2,7 @@
 
 namespace Market_Club.Forms
 {
-    partial class Form4
+    partial class EliminarProductos
     {
         /// <summary>
         /// Required designer variable.
