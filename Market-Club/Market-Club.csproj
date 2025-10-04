@@ -229,10 +229,18 @@
     <Compile Include="Forms\SupervisorForm\SupervisorReports.Designer.cs">
       <DependentUpon>SupervisorReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\CategoryModel.Designer.cs">
+      <DependentUpon>CategoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DetalleVenta.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\SubCategory.cs" />
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Models\RolModel.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\VentaModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClientService.cs" />
@@ -323,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupervisorForm\SupervisorReports.resx">
       <DependentUpon>SupervisorReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\CategoryModel.resx">
+      <DependentUpon>CategoryModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

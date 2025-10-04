@@ -61,5 +61,7 @@ namespace Market_Club.Forms.CrudSell
             AgregarCliente agregarCliente = new AgregarCliente();
             agregarCliente.ShowDialog();
         }
+
+       
     }
 }

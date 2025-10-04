@@ -138,6 +138,7 @@
             this.label2.Size = new System.Drawing.Size(129, 19);
             this.label2.TabIndex = 44;
             this.label2.Text = "CUIT DEL CLIENTE:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -285,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1369, 805);
+            this.ClientSize = new System.Drawing.Size(1369, 788);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.numCantidad);
