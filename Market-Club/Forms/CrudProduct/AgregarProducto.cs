@@ -64,7 +64,7 @@ namespace Market_Club.Forms.CrudProduct
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             if (Validator.isValidText(txtDescription.Text, "Descripcion") && Validator.isValidText(txtProductName.Text, "Nombre del producto") 
-                && string.IsNullOrEmpty(cbCategory.Text) && string.IsNullOrEmpty(cbSubCategory.Text) && string.IsNullOrEmpty(cbUnidad.Text)
+                && string.IsNullOrEmpty(cbCategory.Text)
                 && Validator.isValidNum(txtStock.Text, "Cantidad") && Validator.isValidNum(txtStockMin.Text,"Cantidad minima") && Validator.isValidImage(pbImage.Image,"Imagen"))
             {
                 return;
@@ -72,5 +72,7 @@ namespace Market_Club.Forms.CrudProduct
             return;
 
         }
+
+
     }
 }
