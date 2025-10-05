@@ -14,7 +14,7 @@ namespace Market_Club.Models
     public int Stock { get; set; }
     public int StockMinimo { get; set; }
     public string Categoria { get; set; }
-    public string SubCategoria { get; set; } // Si manejás subcategorías
+    public int SubCategoria { get; set; } // Si manejás subcategorías
     public string UnidadMedida { get; set; }
     public string Proveedor { get; set; }
     public bool Activo { get; set; }   // true = disponible

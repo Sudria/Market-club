@@ -1,6 +1,6 @@
-﻿namespace Market_Club.Class
+﻿namespace Market_Club.Forms
 {
-    partial class CategoryModel
+    partial class FormCategoryProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // CategoryModel
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "CategoryModel";
-            this.Text = "CategoryModel";
-            this.Load += new System.EventHandler(this.CategoryModel_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "FormCategoryProduct";
         }
 
         #endregion
