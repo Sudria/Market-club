@@ -8,16 +8,15 @@ namespace Market_Club.Models
 {
     public class ProductModel 
     {
-    public int Id { get; set; }  // Autogenerado en BD
+    public int CodProducto { get; set; }  
     public string Nombre { get; set; }
+    public string Marca { get; set; }
+    public string Descripcion { get; set; }
     public decimal Precio { get; set; }
-    public int Stock { get; set; }
-    public int StockMinimo { get; set; }
+    public int Cantidad { get; set; }
+    public int CantidadMinima { get; set; }
     public string Categoria { get; set; }
-    public int SubCategoria { get; set; } // Si manejás subcategorías
-    public string UnidadMedida { get; set; }
-    public string Proveedor { get; set; }
-    public bool Activo { get; set; }   // true = disponible
-    public string ImagenRuta { get; set; } // Guarda la ruta de la imagen
+    public bool Activo { get; set; }  
+    public string ImagenRuta { get; set; }
    }
 }
