@@ -56,7 +56,7 @@ namespace Market_Club.Forms.CrudProduct
                     pbImage.Image = Image.FromFile(ofd.FileName);
                     pbImage.SizeMode = PictureBoxSizeMode.Zoom; // Ajusta la imagen al tamaño del PictureBox
                     string fileName = ofd.FileName;
-                    txtRutaImagen.Text = ofd.FileName;
+                   // txtRutaImagen.Text = ofd.FileName;
                 }
             }
         }
@@ -73,6 +73,6 @@ namespace Market_Club.Forms.CrudProduct
 
         }
 
-
+       
     }
 }

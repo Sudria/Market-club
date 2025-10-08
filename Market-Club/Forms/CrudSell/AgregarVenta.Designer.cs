@@ -138,7 +138,7 @@
             this.label2.Size = new System.Drawing.Size(129, 19);
             this.label2.TabIndex = 44;
             this.label2.Text = "CUIT DEL CLIENTE:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+     //       this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 

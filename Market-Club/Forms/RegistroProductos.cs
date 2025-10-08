@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms
 {
-    public partial class Form1 : Form
+    public partial class RegistroProductos : Form
     {
         private static readonly List<Producto> productos = new List<Producto>();
 
         // Lista en memoria para simular la base de datos
         private readonly List<Producto> listaProductos = productos;
 
-        public Form1()
+        public RegistroProductos()
         {
             InitializeComponent();
         }

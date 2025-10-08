@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms
 {
-    public partial class Form2 : Form
+    public partial class AltaProducto : Form
     {
         string connectionString = "Data Source=.;Initial Catalog=TuBase;Integrated Security=True;";
+        private object cboUnidadMedida;
+        private object txtRutaImagen;
+        private object picProducto;
+        private object cboProveedor;
+        private string conexion;
 
-        public Form2()
+        public AltaProducto()
         {
             InitializeComponent();
             CargarCategorias();
@@ -67,6 +72,52 @@ namespace Market_Club.Forms
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conexion))
+                {
+                    con.Open();
+                    string query = "INSERT INTO Productos (Nombre, Precio, Stock, UnidadMedida, Proveedor, Activo, Imagen) " +
+                                   "VALUES (@nombre, @precio, @stock, @unidad, @proveedor, @activo, @imagen)";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                    cmd.Parameters.AddWithValue("@precio", decimal.Parse(txtPrecio.Text));
+                    cmd.Parameters.AddWithValue("@stock", int.Parse(txtStock.Text));
+                    cmd.Parameters.AddWithValue("@unidad", cboUnidadMedida.Text);
+                    cmd.Parameters.AddWithValue("@proveedor", cboProveedor.Text);
+                    cmd.Parameters.AddWithValue("@activo", chkActivo.Checked ? 1 : 0);
+
+                    // Imagen (guardar como arreglo de bytes en SQL)
+                    byte[] imgData = null;
+                    if (!string.IsNullOrEmpty(txtRutaImagen.Text))
+                    {
+                        imgData = System.IO.File.ReadAllBytes(txtRutaImagen.Text);
+                    }
+                    cmd.Parameters.AddWithValue("@imagen", (object)imgData ?? DBNull.Value);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("✅ Producto agregado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar producto: " + ex.Message);
+            }
+        }
+        private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtRutaImagen.Text = ofd.FileName;  // guardo la ruta en un TextBox oculto
+                picProducto.Image = Image.FromFile(ofd.FileName);  // muestro en un PictureBox
             }
         }
 

@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms
 {
-    public partial class Form3 : Form
+    public partial class EditarProductos : Form
     {
         string connectionString = "Data Source=.;Initial Catalog=TuBase;Integrated Security=True;";
 
-        public Form3()
+        public EditarProductos()
         {
             InitializeComponent();
             CargarCategorias();
@@ -34,7 +34,15 @@ namespace Market_Club.Forms
                 }
             }
         }
-
+        private void btnAddCategoria_Click(object sender, EventArgs e)
+        {
+            string nuevaCat = Microsoft.VisualBasic.Interaction.InputBox("Ingrese nueva categoría:", "Añadir Categoría", "");
+            if (!string.IsNullOrWhiteSpace(nuevaCat))
+            {
+                cmbCategoria.Items.Add(nuevaCat);
+                cmbCategoria.SelectedItem = nuevaCat;
+            }
+        }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             try

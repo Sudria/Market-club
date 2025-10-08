@@ -7,7 +7,8 @@ namespace Market_Club.Services
 {
     internal class ClientService
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["db-string"].ConnectionString;
+        private static readonly string connectionString1 = ConfigurationManager.ConnectionStrings["db-string"].ConnectionString;
+        private string connectionString = connectionString1;
         public void CreateTable()
         {
             string query = @"
@@ -96,7 +97,6 @@ namespace Market_Club.Services
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            return false;
         }
 
         public ClientModel ShowClientByCuit(int cuit)

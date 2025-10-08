@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Market_Club.Class
+namespace Market_Club.Forms
 {
-    public partial class CategoryModel 
+    public partial class AddCategory : Form
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        
+        public AddCategory()
+        {
+            InitializeComponent();
+        }
     }
 }
