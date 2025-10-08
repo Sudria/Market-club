@@ -1,15 +1,14 @@
 ﻿using Market_Club.Class;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace Market_Club.Services
 {
     internal class ClientService
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["db-string"].ConnectionString;
+        private static readonly string connectionString1 = ConfigurationManager.ConnectionStrings["db-string"].ConnectionString;
+        private string connectionString = connectionString1;
         public void CreateTable()
         {
             string query = @"
@@ -20,7 +19,6 @@ namespace Market_Club.Services
             Name NVARCHAR(100),
             Surname NVARCHAR(100),
             Tel NVARCHAR(20),
-            Gender NVARCHAR(10),
             Birthdate DATE,
             Address NVARCHAR(200),
             Email NVARCHAR(100)
@@ -40,7 +38,7 @@ namespace Market_Club.Services
 
         public void InsertClient(ClientModel client)
         {
-            string query = "INSERT INTO Clients (Cuit, Name, Surname, Tel, Gender, Birthdate, Address, Email) VALUES (@Cuit, @Name, @Surname, @Tel, @Gender, @Birthdate, @Address, @Email)";
+            string query = "INSERT INTO Clients (Cuit, Name, Surname, Tel, Gender, Birthdate, Address, Email) VALUES (@Cuit, @Name, @Surname, @Tel, @Birthdate, @Address, @Email)";
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
@@ -49,7 +47,6 @@ namespace Market_Club.Services
                 cmd.Parameters.AddWithValue("@Name", client.Name);
                 cmd.Parameters.AddWithValue("@Surname", client.Surname);
                 cmd.Parameters.AddWithValue("@Tel", client.Tel);
-                cmd.Parameters.AddWithValue("@Gender", client.Gender);
                 cmd.Parameters.AddWithValue("@Birthdate", client.Birthdate);
                 cmd.Parameters.AddWithValue("@Address", client.Address);
                 cmd.Parameters.AddWithValue("@Email", client.Email);
@@ -78,7 +75,6 @@ namespace Market_Club.Services
                             Name = reader["Name"]?.ToString(),
                             Surname = reader["Surname"]?.ToString(),
                             Tel = reader["Tel"]?.ToString(),
-                            Gender = reader["Gender"]?.ToString(),
                             Birthdate = reader["Birthdate"]?.ToString(),
                             Address = reader["Address"]?.ToString(),
                             Email = reader["Email"]?.ToString()
@@ -90,7 +86,7 @@ namespace Market_Club.Services
             return clients;
         }
 
-        public void DeleteClient(int cuit)
+        public bool DeleteClient(int cuit)
         {
             string query = "DELETE FROM Clients WHERE Cuit = @Cuit";
             using (SqlConnection conexion = new SqlConnection(connectionString))
@@ -99,6 +95,7 @@ namespace Market_Club.Services
                 cmd.Parameters.AddWithValue("@Cuit", cuit);
                 conexion.Open();
                 cmd.ExecuteNonQuery();
+                return true;
             }
         }
 
@@ -117,11 +114,38 @@ namespace Market_Club.Services
                     Name = reader["Name"]?.ToString(),
                     Surname = reader["Surname"]?.ToString(),
                     Tel = reader["Tel"]?.ToString(),
-                    Gender = reader["Gender"]?.ToString(),
                     Birthdate = reader["Birthdate"]?.ToString(),
                     Address = reader["Address"]?.ToString(),
                     Email = reader["Email"]?.ToString()
                 } : null;
+            }
+        }
+
+
+        public void UpdateClient(ClientModel client)
+        {
+            string query = @"UPDATE Clients
+                     SET Name = @Name,
+                         Surname = @Surname,
+                         Tel = @Tel,
+                         Birthdate = @Birthdate,
+                         Address = @Address,
+                         Email = @Email
+                     WHERE Cuit = @Cuit"; 
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@Cuit", client.Cuit);
+                cmd.Parameters.AddWithValue("@Name", client.Name);
+                cmd.Parameters.AddWithValue("@Surname", client.Surname);
+                cmd.Parameters.AddWithValue("@Tel", client.Tel);
+                cmd.Parameters.AddWithValue("@Birthdate", client.Birthdate);
+                cmd.Parameters.AddWithValue("@Address", client.Address);
+                cmd.Parameters.AddWithValue("@Email", client.Email);
+
+                conexion.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
             }
         }
     }
