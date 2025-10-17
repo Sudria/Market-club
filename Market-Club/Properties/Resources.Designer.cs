@@ -93,6 +93,16 @@ namespace Market_Club.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backup_black {
+            get {
+                object obj = ResourceManager.GetObject("backup black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap categorias {
             get {
                 object obj = ResourceManager.GetObject("categorias", resourceCulture);
@@ -153,29 +163,9 @@ namespace Market_Club.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap modificar {
+        internal static System.Drawing.Bitmap restore_backup {
             get {
-                object obj = ResourceManager.GetObject("modificar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap modificarUs {
-            get {
-                object obj = ResourceManager.GetObject("modificarUs", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap prototipo {
-            get {
-                object obj = ResourceManager.GetObject("prototipo", resourceCulture);
+                object obj = ResourceManager.GetObject("restore backup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

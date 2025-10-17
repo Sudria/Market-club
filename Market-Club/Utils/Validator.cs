@@ -60,5 +60,15 @@ namespace Market_Club.Utils
             }
             return true;
         }
+
+        public static bool isValidImage(object image, string fieldCamp)
+        {
+            if (image == null)
+            {
+                MessageBox.Show($"El campo {fieldCamp} no puede estar vacío.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
     }
 }

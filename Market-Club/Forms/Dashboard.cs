@@ -1,0 +1,110 @@
+﻿using Market_Club.Forms.CrudClient;
+using Market_Club.Forms.SellerForms;
+using Market_Club.Forms.SupervisorForm;
+using Market_Club.Models;
+using MarketClub;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Market_Club
+{
+    public partial class Dashboard : Form
+    {
+
+
+        public UserModel user = new UserModel();
+
+        public Dashboard(UserModel LoggedUsser)
+        {
+            InitializeComponent();
+            user = LoggedUsser;
+            CargarPanelSegunRol();
+            
+        }
+
+
+        private void AdminButton_Click(object sender, EventArgs e)
+        {
+
+            dashboardPanel.Controls.Clear(); 
+            RolLabel.Text = "Admin";
+            AdminPanel adminPanel = new AdminPanel();
+            dashboardPanel.Controls.Add(adminPanel);
+            contentPanel.Controls.Clear();
+            AdminHome adminHome = new AdminHome();
+            contentPanel.Controls.Add(adminHome);
+
+        }
+
+        private void SupervisorButton_Click(object sender, EventArgs e)
+        {
+            dashboardPanel.Controls.Clear();
+            RolLabel.Text = "Supervisor";
+            SupervisorPanel supervisorPanel = new SupervisorPanel();
+            dashboardPanel.Controls.Add(supervisorPanel);
+            contentPanel.Controls.Clear();
+        }
+
+        private void SellerButton_Click(object sender, EventArgs e)
+        {
+            dashboardPanel.Controls.Clear();
+            RolLabel.Text = "Vendedor";
+            SellerPanel sellerDashboard1 = new SellerPanel();
+            dashboardPanel.Controls.Add(sellerDashboard1);
+            contentPanel.Controls.Clear();
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CargarPanelSegunRol()
+        {
+            dashboardPanel.Controls.Clear();
+            contentPanel.Controls.Clear();
+
+            switch (user.RolId)
+            {
+                case 1: // Admin
+                    RolLabel.Text = "Admin";
+                    AdminPanel adminPanel1 = new AdminPanel();
+                    dashboardPanel.Controls.Add(adminPanel1);
+                    AdminHome adminHome = new AdminHome();
+                    contentPanel.Controls.Add(adminHome);
+                    break;
+
+                case 2: // Supervisor
+
+                    RolLabel.Text = "Supervisor";
+                    SupervisorPanel supervisorPanel = new SupervisorPanel();
+                    dashboardPanel.Controls.Add(supervisorPanel);
+                    break;
+
+                case 3: // Vendedor
+                    RolLabel.Text = "Vendedor";
+                    SellerPanel sellerDashboard1 = new SellerPanel();
+                    dashboardPanel.Controls.Add(sellerDashboard1);
+                    break;
+
+                default:
+                    RolLabel.Text = "Desconocido";
+                    break;
+            }
+        }
+    }
+     
+}
