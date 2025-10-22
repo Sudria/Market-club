@@ -398,21 +398,12 @@ namespace Market_Club.Forms.CrudProduct
             "AMARILLO",
             "NEGRO",
             "BLANCO"});
-<<<<<<< HEAD
-            this.comboBox1.Location = new System.Drawing.Point(100, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 73;
-            this.comboBox1.Visible = false;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-=======
             this.cbColor.Location = new System.Drawing.Point(155, 59);
             this.cbColor.Margin = new System.Windows.Forms.Padding(4);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(160, 24);
             this.cbColor.TabIndex = 73;
             this.cbColor.Visible = false;
->>>>>>> 8a8739f0bf65715264829feb6449eb141dc8a125
             // 
             // lblModelo
             // 
