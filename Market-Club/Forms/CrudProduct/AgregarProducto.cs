@@ -33,17 +33,7 @@ namespace Market_Club.Forms.CrudProduct
             return;
         }
 
-        private void btnAgregarCategoria_Click(object sender, EventArgs e)
-        {
-            AgregarCategoria agregarCategoria = new AgregarCategoria();
-            agregarCategoria.ShowDialog();
-        }
-
-        private void btnAgregarSubCategoria_Click(object sender, EventArgs e)
-        {
-            AgregarSubCategoria agregarSubCategoria = new AgregarSubCategoria();
-            agregarSubCategoria.ShowDialog();
-        }
+      
 
         private void btnImage_Click(object sender, EventArgs e)
         {
@@ -51,7 +41,11 @@ namespace Market_Club.Forms.CrudProduct
             {
                 ofd.Title = "Seleccionar imagen";
                 ofd.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+<<<<<<< HEAD
                 ofd.InitialDirectory = @"C:\Users\Alejandrina\Desktop\Market-Club\Market-Club\icon"; //  Carpeta inicial sugerida (podés cambiarla)
+=======
+                ofd.InitialDirectory = ""; // 📌 Carpeta inicial sugerida (podés cambiarla)
+>>>>>>> 8a8739f0bf65715264829feb6449eb141dc8a125
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {

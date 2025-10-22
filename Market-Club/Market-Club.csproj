@@ -134,23 +134,11 @@
     <Compile Include="Forms\CrudClient\ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CrudProduct\AgregarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CrudProduct\AgregarCategoria.Designer.cs">
-      <DependentUpon>AgregarCategoria.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\CrudProduct\AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CrudProduct\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CrudProduct\AgregarSubCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CrudProduct\AgregarSubCategoria.Designer.cs">
-      <DependentUpon>AgregarSubCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CrudSell\AgregarVenta.cs">
       <SubType>Form</SubType>
@@ -231,10 +219,13 @@
       <DependentUpon>SupervisorReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DetalleVenta.cs" />
+    <Compile Include="Models\ProductBazarModel.cs" />
+    <Compile Include="Models\ProductIndumentariaModel.cs" />
+    <Compile Include="Models\ProductLibreriaModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
-    <Compile Include="Models\SubCategory.cs" />
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Models\ProductTecnologiaModel.cs" />
     <Compile Include="Models\RolModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\VentaModel.cs" />
@@ -285,14 +276,8 @@
     <EmbeddedResource Include="Forms\CrudClient\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CrudProduct\AgregarCategoria.resx">
-      <DependentUpon>AgregarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CrudProduct\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CrudProduct\AgregarSubCategoria.resx">
-      <DependentUpon>AgregarSubCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CrudSell\AgregarVenta.resx">
       <DependentUpon>AgregarVenta.cs</DependentUpon>
