@@ -3,6 +3,7 @@ using Market_Club.Services;
 using Market_Club.Utils;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,10 @@ namespace Market_Club.Controllers
         internal class UserController
         {
             private readonly UserService _userService;
+        private readonly SqlConnection sqlConnection;
+        private readonly SqlConnection conexion;
 
-            public UserController()
+        public UserController()
             {
                 _userService = new UserService();
             }
@@ -91,7 +94,7 @@ namespace Market_Club.Controllers
             {
                 return _userService.ShowUserById(id);
             }
-
+        
             // Validar login
             public UserModel Login(string username, string password)
             {

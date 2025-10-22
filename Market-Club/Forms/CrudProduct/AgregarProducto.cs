@@ -11,10 +11,12 @@ using System.Windows.Forms;
 
 namespace Market_Club.Forms.CrudProduct
 {
+   
+
     public partial class AgregarProducto : Form
     {
         private object txtRutaImagen;
-
+        private List<Producto> ListaProductos = new List<Producto>();
         public AgregarProducto()
         {
             InitializeComponent();
@@ -49,7 +51,7 @@ namespace Market_Club.Forms.CrudProduct
             {
                 ofd.Title = "Seleccionar imagen";
                 ofd.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
-                ofd.InitialDirectory = @"C:\Users\Alejandrina\Desktop\Market-Club\Market-Club\icon"; // 📌 Carpeta inicial sugerida (podés cambiarla)
+                ofd.InitialDirectory = @"C:\Users\Alejandrina\Desktop\Market-Club\Market-Club\icon"; //  Carpeta inicial sugerida (podés cambiarla)
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
@@ -63,16 +65,53 @@ namespace Market_Club.Forms.CrudProduct
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-            if (Validator.isValidText(txtDescription.Text, "Descripcion") && Validator.isValidText(txtProductName.Text, "Nombre del producto") 
-                && string.IsNullOrEmpty(cbCategory.Text)
-                && Validator.isValidNum(txtStock.Text, "Cantidad") && Validator.isValidNum(txtStockMin.Text,"Cantidad minima") && Validator.isValidImage(pbImage.Image,"Imagen"))
+            // Validaciones
+            if (!Validator.isValidText(txtDescription.Text, "Descripción")) return;
+            if (!Validator.isValidText(txtProductName.Text, "Nombre del producto")) return;
+            if (string.IsNullOrEmpty(cbCategory.Text))
             {
+                MessageBox.Show("Debe seleccionar una categoría.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            return;
+            if (!Validator.isValidNum(txtStock.Text, "Cantidad")) return;
+            if (!Validator.isValidNum(txtStockMin.Text, "Cantidad mínima")) return;
+            if (!Validator.isValidImage(pbImage.Image, "Imagen")) return;
+
+            // Crear objeto producto
+            Producto nuevoProducto = new Producto
+            {
+                Nombre = txtProductName.Text,
+                Descripcion = txtDescription.Text,
+                Categoria = cbCategory.Text,
+                Stock = int.Parse(txtStock.Text),
+                StockMinimo = int.Parse(txtStockMin.Text),
+                Imagen = pbImage.Image
+            };
+
+            // 🔹 Guardar producto en la lista o base de datos
+            // Ejemplo temporal: simular guardado en memoria
+            ListaProductos.Add(nuevoProducto);
+
+            MessageBox.Show("Producto guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Limpiar campos
+            txtProductName.Clear();
+            txtDescription.Clear();
+            txtStock.Clear();
+            txtStockMin.Clear();
+            cbCategory.SelectedIndex = -1;
+            pbImage.Image = null;
+        }
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
-       
+        private void cbTalle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

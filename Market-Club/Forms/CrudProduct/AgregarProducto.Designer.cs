@@ -351,6 +351,7 @@ namespace Market_Club.Forms.CrudProduct
             this.cbTalle.Size = new System.Drawing.Size(121, 21);
             this.cbTalle.TabIndex = 71;
             this.cbTalle.Visible = false;
+            this.cbTalle.SelectedIndexChanged += new System.EventHandler(this.cbTalle_SelectedIndexChanged);
             // 
             // lblColor
             // 
@@ -378,6 +379,7 @@ namespace Market_Club.Forms.CrudProduct
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 73;
             this.comboBox1.Visible = false;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblModelo
             // 

@@ -8,19 +8,21 @@ namespace Market_Club.Models
 {
     public class UserModel
     {
-        public UserModel()
-        {
-        }
+     
 
-        public int Id { get; set; }                
+        public int Id { get; set; }
+        
         public string Name { get; set; }  
         public string Surname { get; set; }
         public string Email { get; set; }          
         public string Password { get; set; }   
         public int RolId { get; set; }
         public string Username { get; set; }
+        public bool IsActive { get; internal set; }
+        
 
-    }
-
+      
+    }  
+  
 }
 

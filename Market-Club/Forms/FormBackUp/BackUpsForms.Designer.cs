@@ -75,6 +75,7 @@
             this.btnNewBackup.Size = new System.Drawing.Size(97, 68);
             this.btnNewBackup.TabIndex = 6;
             this.btnNewBackup.UseVisualStyleBackColor = true;
+            this.btnNewBackup.Click += new System.EventHandler(this.btnNewBackup_Click);
             // 
             // button1
             // 
@@ -87,7 +88,7 @@
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // BackUps
+            // BackUpsForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -96,7 +97,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Name = "BackUps";
+            this.Name = "BackUpsForms";
             this.Size = new System.Drawing.Size(1146, 694);
             this.ResumeLayout(false);
             this.PerformLayout();
