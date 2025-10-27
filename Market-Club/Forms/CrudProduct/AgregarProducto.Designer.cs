@@ -61,8 +61,6 @@ namespace Market_Club.Forms.CrudProduct
             this.cbColor = new System.Windows.Forms.ComboBox();
             this.lblModelo = new System.Windows.Forms.Label();
             this.txtModelo = new System.Windows.Forms.TextBox();
-            this.lblMarca = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.txtMaterial = new System.Windows.Forms.TextBox();
             this.lblUso = new System.Windows.Forms.Label();
@@ -428,28 +426,6 @@ namespace Market_Club.Forms.CrudProduct
             this.txtModelo.TabIndex = 75;
             this.txtModelo.Visible = false;
             // 
-            // lblMarca
-            // 
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.BackColor = System.Drawing.SystemColors.Control;
-            this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblMarca.Location = new System.Drawing.Point(8, 56);
-            this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(72, 23);
-            this.lblMarca.TabIndex = 76;
-            this.lblMarca.Text = "MARCA";
-            this.lblMarca.Visible = false;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(155, 56);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(160, 22);
-            this.txtMarca.TabIndex = 77;
-            this.txtMarca.Visible = false;
-            // 
             // lblMaterial
             // 
             this.lblMaterial.AutoSize = true;
@@ -537,16 +513,10 @@ namespace Market_Club.Forms.CrudProduct
             this.groupBox1.Controls.Add(this.cbUso);
             this.groupBox1.Controls.Add(this.txtEditorial);
             this.groupBox1.Controls.Add(this.lblUso);
-            this.groupBox1.Controls.Add(this.cbColor);
-            this.groupBox1.Controls.Add(this.txtMaterial);
-            this.groupBox1.Controls.Add(this.lblEditorial);
-            this.groupBox1.Controls.Add(this.lblMaterial);
             this.groupBox1.Controls.Add(this.lblModelo);
             this.groupBox1.Controls.Add(this.txtAutor);
             this.groupBox1.Controls.Add(this.txtModelo);
             this.groupBox1.Controls.Add(this.lblAutor);
-            this.groupBox1.Controls.Add(this.lblMarca);
-            this.groupBox1.Controls.Add(this.txtMarca);
             this.groupBox1.Location = new System.Drawing.Point(568, 140);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -631,8 +601,6 @@ namespace Market_Club.Forms.CrudProduct
                 case "Tecnologia":
                     lblModelo.Visible = true;
                     txtModelo.Visible = true;
-                    lblMarca.Visible = true;
-                    txtMarca.Visible = true;
                     break;
 
                 case "Libreria":
@@ -665,8 +633,6 @@ namespace Market_Club.Forms.CrudProduct
             // Tecnología
             lblModelo.Visible = false;
             txtModelo.Visible = false;
-            lblMarca.Visible = false;
-            txtMarca.Visible = false;
 
             // Librería
             lblAutor.Visible = false;
@@ -705,7 +671,6 @@ namespace Market_Club.Forms.CrudProduct
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
@@ -716,7 +681,6 @@ namespace Market_Club.Forms.CrudProduct
         private System.Windows.Forms.ComboBox cbColor;
         private System.Windows.Forms.Label lblModelo;
         private System.Windows.Forms.TextBox txtModelo;
-        private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label lblMaterial;
         private System.Windows.Forms.TextBox txtMaterial;
